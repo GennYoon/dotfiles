@@ -2,14 +2,15 @@
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 
-brew "cask"
 brew "awscli"
-
 brew "tree-sitter"
 brew "cask"
 brew "ruby"
 brew "cocoapods"
 brew "neovim"
+
+brew "go"
+brew "gopls"
 
 brew "ripgrep"
 brew "eza"
