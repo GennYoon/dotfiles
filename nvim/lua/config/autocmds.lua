@@ -15,3 +15,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 0
   end,
 })
+
+-- Terraform에서 새파일 생성시 바로 terraform인지 체크를 못하기때문에 해당 파일이 열리면 포맷을 찾게한다.
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "tf", "tfvars" },
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
