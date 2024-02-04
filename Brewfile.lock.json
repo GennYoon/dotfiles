@@ -971,6 +971,50 @@
             }
           }
         }
+      },
+      "firebase-cli": {
+        "version": "13.1.0",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:a96eb6851dc2f5ae471c4d96a3439784eaf498e74a34f95ddf12ff2f4c78bb55",
+              "sha256": "a96eb6851dc2f5ae471c4d96a3439784eaf498e74a34f95ddf12ff2f4c78bb55"
+            },
+            "arm64_ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:a96eb6851dc2f5ae471c4d96a3439784eaf498e74a34f95ddf12ff2f4c78bb55",
+              "sha256": "a96eb6851dc2f5ae471c4d96a3439784eaf498e74a34f95ddf12ff2f4c78bb55"
+            },
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:a96eb6851dc2f5ae471c4d96a3439784eaf498e74a34f95ddf12ff2f4c78bb55",
+              "sha256": "a96eb6851dc2f5ae471c4d96a3439784eaf498e74a34f95ddf12ff2f4c78bb55"
+            },
+            "sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:02785e6315082559c9beb736d89600458c09116897143c1ad0b1a0360b77eb7f",
+              "sha256": "02785e6315082559c9beb736d89600458c09116897143c1ad0b1a0360b77eb7f"
+            },
+            "ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:02785e6315082559c9beb736d89600458c09116897143c1ad0b1a0360b77eb7f",
+              "sha256": "02785e6315082559c9beb736d89600458c09116897143c1ad0b1a0360b77eb7f"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:02785e6315082559c9beb736d89600458c09116897143c1ad0b1a0360b77eb7f",
+              "sha256": "02785e6315082559c9beb736d89600458c09116897143c1ad0b1a0360b77eb7f"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/firebase-cli/blobs/sha256:34b96c83f0534c24d1335fab223573b8f6b4124b50436a182e208401e408cfd9",
+              "sha256": "34b96c83f0534c24d1335fab223573b8f6b4124b50436a182e208401e408cfd9"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -1068,6 +1112,18 @@
         "version": "3.1.1",
         "options": {
           "full_name": "font-symbols-only-nerd-font"
+        }
+      },
+      "arc": {
+        "version": "1.28.0,45831",
+        "options": {
+          "full_name": "arc"
+        }
+      },
+      "warp": {
+        "version": "0.2024.01.30.16.52.stable_01",
+        "options": {
+          "full_name": "warp"
         }
       }
     }
