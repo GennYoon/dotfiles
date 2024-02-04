@@ -1015,6 +1015,50 @@
             }
           }
         }
+      },
+      "pnpm": {
+        "version": "8.15.1",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_sonoma": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/pnpm/blobs/sha256:00e5c4883edfe97bf6cd3fdbae35944928a55de00dce11c04eafa550238621db",
+              "sha256": "00e5c4883edfe97bf6cd3fdbae35944928a55de00dce11c04eafa550238621db"
+            },
+            "arm64_ventura": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/pnpm/blobs/sha256:00e5c4883edfe97bf6cd3fdbae35944928a55de00dce11c04eafa550238621db",
+              "sha256": "00e5c4883edfe97bf6cd3fdbae35944928a55de00dce11c04eafa550238621db"
+            },
+            "arm64_monterey": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/pnpm/blobs/sha256:00e5c4883edfe97bf6cd3fdbae35944928a55de00dce11c04eafa550238621db",
+              "sha256": "00e5c4883edfe97bf6cd3fdbae35944928a55de00dce11c04eafa550238621db"
+            },
+            "sonoma": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/pnpm/blobs/sha256:7e45476e45e0be33d62d4ef57aee17b7f5aa9be929f71c64d366565de164ef3d",
+              "sha256": "7e45476e45e0be33d62d4ef57aee17b7f5aa9be929f71c64d366565de164ef3d"
+            },
+            "ventura": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/pnpm/blobs/sha256:7e45476e45e0be33d62d4ef57aee17b7f5aa9be929f71c64d366565de164ef3d",
+              "sha256": "7e45476e45e0be33d62d4ef57aee17b7f5aa9be929f71c64d366565de164ef3d"
+            },
+            "monterey": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/pnpm/blobs/sha256:7e45476e45e0be33d62d4ef57aee17b7f5aa9be929f71c64d366565de164ef3d",
+              "sha256": "7e45476e45e0be33d62d4ef57aee17b7f5aa9be929f71c64d366565de164ef3d"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/pnpm/blobs/sha256:a989c117eed1a84e262fa6a65944d005d5f6cd714eafdf626cd2562ecc036bb2",
+              "sha256": "a989c117eed1a84e262fa6a65944d005d5f6cd714eafdf626cd2562ecc036bb2"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -1124,6 +1168,12 @@
         "version": "0.2024.01.30.16.52.stable_01",
         "options": {
           "full_name": "warp"
+        }
+      },
+      "devtoys": {
+        "version": "0.0.11",
+        "options": {
+          "full_name": "devtoys"
         }
       }
     }
