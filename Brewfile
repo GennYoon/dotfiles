@@ -1,13 +1,18 @@
 # Brewfile
 tap "hashicorp/tap"
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 
 brew "awscli"
 brew "tree-sitter"
 brew "cask"
+
 brew "ruby"
+brew "rbenv"
+
 brew "cocoapods"
 brew "neovim"
+brew "lazygit"
 
 brew "go"
 brew "gopls"
@@ -23,7 +28,7 @@ brew "git"
 brew "lua-language-server"
 
 brew "nvm"
-brew "rbenv"
+
 
 brew "zsh"
 brew "zsh-autosuggestions"
@@ -45,4 +50,7 @@ cask "docker"
 cask "android-studio"
 cask "notion"
 cask "temurin"
-
+cask "figma"
+cask "zed"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-symbols-only-nerd-font"
