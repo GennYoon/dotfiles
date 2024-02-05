@@ -1175,6 +1175,12 @@
         "options": {
           "full_name": "devtoys"
         }
+      },
+      "raycast": {
+        "version": "1.66.2",
+        "options": {
+          "full_name": "raycast"
+        }
       }
     }
   },

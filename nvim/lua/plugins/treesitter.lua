@@ -8,23 +8,31 @@ return {
         "astro",
         "cmake",
         "cpp",
-        "css",
-        "fish",
-        "gitignore",
         "go",
-        "gomod",
-        "gowork",
-        "gosum",
-        "graphql",
         "http",
         "java",
         "php",
         "rust",
         "scss",
         "sql",
+        "json",
+        "javascript",
+        "typescript",
+        "tsx",
+        "yaml",
+        "html",
+        "css",
+        "prisma",
+        "markdown",
+        "markdown_inline",
         "svelte",
-        "terraform",
-        "hcl",
+        "graphql",
+        "bash",
+        "lua",
+        "vim",
+        "dockerfile",
+        "gitignore",
+        "query",
       },
 
       -- matchup = {
@@ -58,6 +66,9 @@ return {
       },
     },
     config = function(_, opts)
+      opts.autotag = {
+        enable_close_on_slash = false,
+      }
       require("nvim-treesitter.configs").setup(opts)
 
       -- MDX
