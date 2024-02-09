@@ -29,4 +29,9 @@
   - [alacritty](https://github.com/alacritty/alacritty) **_(Linux, Macos & Windows)_**
   - [iterm2](https://iterm2.com/) **_(Macos)_**
 
+## Keymap
+
+<Shift + Control + Up> : Oneline Up
+<Shift + Control + Down> : Oneline Down
+
 ## About Me

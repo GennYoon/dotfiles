@@ -5,8 +5,9 @@ discipline.cowboy()
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
--- q
-keymap.set("n", "\\q", "<cmd>q<cr>", opts)
+-- Oneline Up/Down
+keymap.set("n", "<s-C-up>", ":m -2<Return>", opts)
+keymap.set("n", "<s-C-down>", ":m +1<Return>", opts)
 
 -- Do things without affecting the registers
 -- keymap.set("n", "x", '"_x')
@@ -21,6 +22,15 @@ keymap.set("n", "\\q", "<cmd>q<cr>", opts)
 -- keymap.set("n", "<Leader>D", '"_D')
 -- keymap.set("v", "<Leader>d", '"_d')
 -- keymap.set("v", "<Leader>D", '"_D')
+
+-- codeium
+keymap.set("i", "<C-g>", function()
+  return vim.fn["codeium#Accept"]()
+end, { expr = true })
+
+keymap.set("i", "<C-q>", function()
+  return vim.fn["codeium#Clear"]()
+end, { expr = true })
 
 -- Increment / Decrement
 keymap.set("n", "+", "<C-a>")
