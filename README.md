@@ -2,7 +2,10 @@
 
 <br />
 <br />
-![lazyvim](./images/LazyVim.png)
+
+![LazyVim](https://udakkdpxfzwyalqyjmiz.supabase.co/storage/v1/object/public/images/LazyVim.png)
+
+![LazyGit](/Users/gennyoon/Desktop/LazyGit.png)
 
 ## Contents
 
@@ -33,5 +36,7 @@
 
 <Shift + Control + Up> : Oneline Up
 <Shift + Control + Down> : Oneline Down
+
+
 
 ## About Me
