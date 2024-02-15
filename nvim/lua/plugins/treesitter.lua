@@ -3,6 +3,7 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    version = "0.9.1",
     opts = {
       ensure_installed = {
         "astro",

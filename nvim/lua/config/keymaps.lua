@@ -1,27 +1,9 @@
-local discipline = require("webchemist.discipline")
-
-discipline.cowboy()
-
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 -- Oneline Up/Down
 keymap.set("n", "<s-C-up>", ":m -2<Return>", opts)
 keymap.set("n", "<s-C-down>", ":m +1<Return>", opts)
-
--- Do things without affecting the registers
--- keymap.set("n", "x", '"_x')
--- keymap.set("n", "<Leader>p", '"0p')
--- keymap.set("n", "<Leader>P", '"0P')
--- keymap.set("v", "<Leader>p", '"0p')
--- keymap.set("n", "<Leader>c", '"_c')
--- keymap.set("n", "<Leader>C", '"_C')
--- keymap.set("v", "<Leader>c", '"_c')
--- keymap.set("v", "<Leader>C", '"_C')
--- keymap.set("n", "<Leader>d", '"_d')
--- keymap.set("n", "<Leader>D", '"_D')
--- keymap.set("v", "<Leader>d", '"_d')
--- keymap.set("v", "<Leader>D", '"_D')
 
 -- codeium
 keymap.set("i", "<C-g>", function()
@@ -69,16 +51,3 @@ keymap.set("n", "<C-w><left>", "<C-w><")
 keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
-
--- Diagnostics
-keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_next()
-end, opts)
-
-keymap.set("n", "<leader>r", function()
-  require("webchemist.hsl").replaceHexWithHSL()
-end)
-
-keymap.set("n", "<leader>i", function()
-  require("webchemist.lsp").toggleInlayHints()
-end, opts)

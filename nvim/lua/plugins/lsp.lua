@@ -13,6 +13,8 @@ return {
         "typescript-language-server",
         "terraform-ls",
         "css-lsp",
+        "eslint-lsp",
+        "prietterd",
       })
     end,
   },
