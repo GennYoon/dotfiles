@@ -1193,6 +1193,12 @@
         "options": {
           "full_name": "zoom"
         }
+      },
+      "blender": {
+        "version": "4.0.2",
+        "options": {
+          "full_name": "blender"
+        }
       }
     }
   },

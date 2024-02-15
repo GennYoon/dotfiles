@@ -3,20 +3,23 @@ tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 
+# 필수
 brew "firebase-cli"
 brew "awscli"
-brew "tree-sitter"
 brew "cask"
 
+# Ruby
 brew "ruby"
 brew "rbenv"
 
 brew "cocoapods"
 brew "neovim"
+
 brew "lazygit"
+brew "tree-sitter"
+brew "gopls"
 
 brew "go"
-brew "gopls"
 
 brew "ripgrep"
 brew "eza"
@@ -26,36 +29,44 @@ brew "fd"
 brew "tmux"
 brew "git"
 
-brew "lua-language-server"
 
+# Node
 brew "nvm"
 brew "pnpm"
 
+# Setting
 brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
+
+#  Terraform
 brew "tflint"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/terraform-ls"
 
-cask "slack" 
-cask "1password"
-cask "typora"
-cask "iterm2"
-cask "arc"
+
+# Cask
+cask "slack" # Chat
+cask "1password" # Password Manager
+cask "typora" # Markdown Editor
+cask "iterm2" # Terminal
+cask "arc" # Screen Recorder
 cask "google-chrome"
-cask "datagrip"
-cask "postman"
-cask "flutter"
-cask "docker"
-cask "android-studio"
-cask "notion"
-cask "temurin"
-cask "figma"
-cask "zed"
-cask "devtoys"
-cask "raycast"
-cask "zoom"
-cask "font-jetbrains-mono-nerd-font"
-cask "font-symbols-only-nerd-font"
+cask "datagrip" # Code Editor
+cask "postman" # API Client
+cask "flutter" # Flutter
+cask "docker" # Container
+cask "android-studio" # Android IDE
+cask "notion" # Notes
+cask "temurin" # Java
+cask "figma" # Design
+cask "devtoys" # DevTools
+cask "raycast" # Keyboard Shortcut
+cask "zoom" # Video Conferencing
+cask "blender" # 3D Modeling
+# ----------------------------------------------
+cask "zed" # Code Formatter
+
+cask "font-jetbrains-mono-nerd-font" # Nerd Font
+cask "font-symbols-only-nerd-font" # Symbol Font
