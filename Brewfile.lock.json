@@ -1306,6 +1306,14 @@
             }
           }
         }
+      },
+      "koekeishiya/formulae/yabai": {
+        "version": "6.0.12",
+        "bottle": false
+      },
+      "skhd": {
+        "version": "0.3.9",
+        "bottle": false
       }
     },
     "cask": {

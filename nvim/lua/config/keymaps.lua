@@ -34,7 +34,7 @@ keymap.set("n", "<D-Left>", "^")
 keymap.set("n", "<D-Right>", "$")
 
 -- Codeium Accept (Complete)
-keymap.set("i", "<D-CR>", function()
+keymap.set("i", "<C-g>", function()
   return vim.fn["codeium#Accept"]()
 end, { expr = true })
 
