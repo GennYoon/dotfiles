@@ -9,7 +9,7 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins", keys = false },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", keys = false, colorscheme = "catppuccin" },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
@@ -22,7 +22,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
     { import = "lazyvim.plugins.extras.lang.docker" },
-    -- { import = "lazyvim.plugins.extras.test.core" },
     { import = "lazyvim.plugins.extras.ui.alpha" },
     -- import/override with your pluginsy
     { import = "plugins" },
@@ -31,7 +30,7 @@ require("lazy").setup({
     lazy = false,
     version = false, -- always use the latest git commit
   },
-  install = { colorscheme = { "tokyonight" } },
+  install = { colorscheme = { "tokyonight", "catppuccin" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     cache = {

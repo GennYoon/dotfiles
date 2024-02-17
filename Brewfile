@@ -4,13 +4,19 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 
 # 필수
-brew "firebase-cli"
+# brew "firebase-cli"
 brew "awscli"
 brew "cask"
 
 # Ruby
 brew "ruby"
 brew "rbenv"
+
+# Brew
+brew "wget"
+brew "arl/arl/gitmux"
+brew "gum"
+
 
 brew "cocoapods"
 brew "neovim"
@@ -29,6 +35,8 @@ brew "fd"
 brew "tmux"
 brew "git"
 
+# Github
+brew "gh"
 
 # Node
 brew "nvm"
@@ -50,7 +58,6 @@ brew "hashicorp/tap/terraform-ls"
 cask "slack" # Chat
 cask "1password" # Password Manager
 cask "typora" # Markdown Editor
-cask "iterm2" # Terminal
 cask "arc" # Screen Recorder
 cask "google-chrome"
 cask "datagrip" # Code Editor
@@ -65,8 +72,14 @@ cask "devtoys" # DevTools
 cask "raycast" # Keyboard Shortcut
 cask "zoom" # Video Conferencing
 cask "blender" # 3D Modeling
-# ----------------------------------------------
-cask "zed" # Code Formatter
+
+cask "alacritty"
 
 cask "font-jetbrains-mono-nerd-font" # Nerd Font
 cask "font-symbols-only-nerd-font" # Symbol Font
+
+
+tap "epk/epk"
+cask "font-sf-mono-nerd-font"
+
+brew "starship"

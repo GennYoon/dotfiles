@@ -90,6 +90,7 @@ local mappings = {
   ["r"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Reformat Code" },
   ["u"] = { "<cmd>lua require('undotree').toggle()<CR>", "Undo-Tree" }, -- Undo History
   ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
+  ["o"] = { "<cmd>Octo<CR>", "Octo" },
 
   ["<tab>"] = {
     name = "Tab",

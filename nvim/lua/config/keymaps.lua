@@ -1,53 +1,80 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
+local term_opts = { silent = true }
 
--- Oneline Up/Down
-keymap.set("n", "<s-C-up>", ":m -2<Return>", opts)
-keymap.set("n", "<s-C-down>", ":m +1<Return>", opts)
+-- Modes
+-- normal_mode = "n",
+-- insert_mode = "i",
+-- visual_mode = "v",
+-- visual_block_mode = "x",
+-- term_mode = "t",
+-- command_mode = "c",
 
--- codeium
-keymap.set("i", "<C-g>", function()
+-- Meta Key
+-- s <shift>
+-- C <control>
+-- M <option>
+-- D <command>
+
+-- Insert --
+-- Press jk fast to enter
+keymap.set("i", "jj", "<ESC>", opts)
+
+-- Tab Control (Complete)
+keymap.set("n", "te", ":tabedit")
+keymap.set("n", "<Tab>", ":tabnext<Return>", opts)
+keymap.set("n", "<s-Tab>", ":tabprev<Return>", opts)
+
+-- Move text up and down (Complete)
+keymap.set("n", "<M-Up>", ":m .-2<CR>", opts)
+keymap.set("n", "<M-Down>", ":m .+1<CR>", opts)
+
+-- Move Curser (Complete)
+keymap.set("n", "<D-Left>", "^")
+keymap.set("n", "<D-Right>", "$")
+
+-- Codeium Accept (Complete)
+keymap.set("i", "<D-CR>", function()
   return vim.fn["codeium#Accept"]()
 end, { expr = true })
 
-keymap.set("i", "<C-q>", function()
-  return vim.fn["codeium#Clear"]()
-end, { expr = true })
-
--- Increment / Decrement
+-- Increment / Decrement (Complete)
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
--- Delete a word backwords
-keymap.set("n", "dw", "vb_d")
+-- Select All (Complete)
+keymap.set("n", "<D-a>", "gg<S-v>G")
 
--- Select All
-keymap.set("n", "<C-a>", "gg<S-v>G")
-
--- Disable continuations
-keymap.set("n", "<Leader>o", "o<Esc>^Da", opts)
-keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
-
--- Jumplist
-keymap.set("n", "<C-m>", "<C-i>", opts)
-
--- New tab
-keymap.set("n", "te", ":tabedit<Return>", opts)
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
-
--- Split window
+-- Split window (Complete)
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
 
--- Move window
-keymap.set("n", "sh", "<C-w>h")
-keymap.set("n", "sk", "<C-w>k")
-keymap.set("n", "sj", "<C-w>j")
-keymap.set("n", "sl", "<C-w>l")
+-- Move window (Complete)
+keymap.set("n", "<M-s-Left>", "<C-w>h")
+keymap.set("n", "<M-s-Up>", "<C-w>k")
+keymap.set("n", "<M-s-Down>", "<C-w>j")
+keymap.set("n", "<M-s-Right>", "<C-w>l")
 
 -- Resize window
 keymap.set("n", "<C-w><left>", "<C-w><")
 keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
+
+-- Visual --
+-- Stay in indent mode (Complete)
+keymap.set("v", "<", "<gv", opts)
+keymap.set("v", ">", ">gv", opts)
+
+-- Move text up and down (Complete)
+keymap.set("v", "<M-Up>", ":m .-2<CR>==", opts)
+keymap.set("v", "<M-Down>", ":m .+1<CR>==", opts)
+
+-- Visual Block --
+-- Move text up and down
+keymap.set("x", "J", ":move '>+1<CR>gv-gv", opts)
+keymap.set("x", "K", ":move '<-2<CR>gv-gv", opts)
+
+-- Move Curser (Complete)
+keymap.set("v", "<D-Left>", "^")
+keymap.set("v", "<D-Right>", "$")
