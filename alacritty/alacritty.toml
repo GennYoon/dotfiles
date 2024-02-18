@@ -33,17 +33,17 @@ family = "JetBrainsMono Nerd Font"
 style = "Medium"
 
 # [[keyboard.bindings]]
-# chars = "\u0002 "
+# chars = "\u0014 "
 # key = "C"
 # mods = "Command|Shift"
 
 [[keyboard.bindings]]
-chars = "\u0002\""
+chars = "\u0014\""
 key = "E"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u0002%"
+chars = "\u0014%"
 key = "E"
 mods = "Command|Shift"
 
@@ -55,37 +55,37 @@ mods = "Command|Shift"
 # mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u0002[/"
+chars = "\u00014[/"
 key = "F"
 mods = "Command|Shift"
 
 [[keyboard.bindings]]
-chars = "\u0002g"
+chars = "\u0014g"
 key = "G"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u0002G"
+chars = "\u0014G"
 key = "G"
 mods = "Command|Shift"
 
 # [[keyboard.bindings]]
-# chars = "\u0002T"
+# chars = "\u0014T"
 # key = "J"
 # mods = "Command"
 #
 # [[keyboard.bindings]]
-# chars = "\u0002T"
+# chars = "\u0014T"
 # key = "K"
 # mods = "Command"
 
 # [[keyboard.bindings]]
-# chars = "\u0002L"
+# chars = "\u0014L"
 # key = "L"
 # mods = "Command"
 #
 # [[keyboard.bindings]]
-# chars = "\u0002u"
+# chars = "\u0014u"
 # key = "O"
 # mods = "Command"
 
@@ -125,37 +125,37 @@ key = "S"
 mods = "Command|Shift"
 
 [[keyboard.bindings]]
-chars = "\u0002c"
+chars = "\u0014c"
 key = "T"
 mods = "Command"
 
 # [[keyboard.bindings]]
-# chars = "\u0002]"
+# chars = "\u0014]"
 # key = "V"
 # mods = "Command|Shift"
 
 # [[keyboard.bindings]]
-# chars = "\u0002P"
+# chars = "\u0014P"
 # key = "T"
 # mods = "Command|Shift"
 
 [[keyboard.bindings]]
-chars = "\u0002x"
+chars = "\u0014x"
 key = "W"
 mods = "Command"
 
 # [[keyboard.bindings]]
-# chars = "\u0002z"
+# chars = "\u0014z"
 # key = "Z"
 # mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u0002n"
+chars = "\u00014n"
 key = "Tab"
 mods = "Control"
 
 [[keyboard.bindings]]
-chars = "\u0002,"
+chars = "\u0014,"
 key = "Comma"
 mods = "Command"
 
@@ -172,7 +172,7 @@ mods = "Command"
 # mods = "Command"
 #
 # [[keyboard.bindings]]
-# chars = "\u0002p"
+# chars = "\u0014p"
 # key = "LBracket"
 # mods = "Command|Shift"
 #
@@ -182,56 +182,56 @@ mods = "Command"
 # mods = "Command"
 #
 # [[keyboard.bindings]]
-# chars = "\u0002n"
+# chars = "\u0014n"
 # key = "RBracket"
 # mods = "Command|Shift"
 
 [[keyboard.bindings]]
-chars = "\u0002:"
+chars = "\u0014:"
 key = "Semicolon"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00021"
+chars = "\u00141"
 key = "Key1"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00022"
+chars = "\u00142"
 key = "Key2"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00023"
+chars = "\u00143"
 key = "Key3"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00024"
+chars = "\u00144"
 key = "Key4"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00025"
+chars = "\u00145"
 key = "Key5"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00026"
+chars = "\u00146"
 key = "Key6"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00027"
+chars = "\u00147"
 key = "Key7"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00028"
+chars = "\u00148"
 key = "Key8"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00029"
+chars = "\u00149"
 key = "Key9"
 mods = "Command"
