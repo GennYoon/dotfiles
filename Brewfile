@@ -53,6 +53,7 @@ brew "tflint"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/terraform-ls"
 
+brew "zoxide"
 
 # Cask
 cask "slack" # Chat

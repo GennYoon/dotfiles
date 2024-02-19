@@ -25,14 +25,6 @@ keymap.set("n", "te", ":tabedit")
 keymap.set("n", "<Tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-Tab>", ":tabprev<Return>", opts)
 
--- Move text up and down (Complete)
-keymap.set("n", "<M-Up>", ":m .-2<CR>", opts)
-keymap.set("n", "<M-Down>", ":m .+1<CR>", opts)
-
--- Move Curser (Complete)
-keymap.set("n", "<D-Left>", "^")
-keymap.set("n", "<D-Right>", "$")
-
 -- Codeium Accept (Complete)
 keymap.set("i", "<C-g>", function()
   return vim.fn["codeium#Accept"]()
@@ -71,12 +63,3 @@ keymap.set("v", ">", ">gv", opts)
 -- Move text up and down (Complete)
 keymap.set("v", "<M-Up>", ":m .-2<CR>==", opts)
 keymap.set("v", "<M-Down>", ":m .+1<CR>==", opts)
-
--- Visual Block --
--- Move text up and down
-keymap.set("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap.set("x", "K", ":move '<-2<CR>gv-gv", opts)
-
--- Move Curser (Complete)
-keymap.set("v", "<D-Left>", "^")
-keymap.set("v", "<D-Right>", "$")

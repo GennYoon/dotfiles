@@ -32,10 +32,15 @@ style = "Medium Italic"
 family = "JetBrainsMono Nerd Font"
 style = "Medium"
 
-# [[keyboard.bindings]]
-# chars = "\u0014 "
-# key = "C"
-# mods = "Command|Shift"
+[[keyboard.bindings]]
+chars = "^"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "$"
+key = "Right"
+mods = "Command"
 
 [[keyboard.bindings]]
 chars = "\u0014\""
@@ -46,13 +51,6 @@ mods = "Command"
 chars = "\u0014%"
 key = "E"
 mods = "Command|Shift"
-
-# [[keyboard.bindings]]
-# chars = """
-# :Grep
-# """
-# key = "F"
-# mods = "Command"
 
 [[keyboard.bindings]]
 chars = "\u00014[/"
@@ -68,47 +66,6 @@ mods = "Command"
 chars = "\u0014G"
 key = "G"
 mods = "Command|Shift"
-
-# [[keyboard.bindings]]
-# chars = "\u0014T"
-# key = "J"
-# mods = "Command"
-#
-# [[keyboard.bindings]]
-# chars = "\u0014T"
-# key = "K"
-# mods = "Command"
-
-# [[keyboard.bindings]]
-# chars = "\u0014L"
-# key = "L"
-# mods = "Command"
-#
-# [[keyboard.bindings]]
-# chars = "\u0014u"
-# key = "O"
-# mods = "Command"
-
-# [[keyboard.bindings]]
-# chars = """
-# :GoToFile
-# """
-# key = "P"
-# mods = "Command"
-#
-# [[keyboard.bindings]]
-# chars = """
-# :GoToCommand
-# """
-# key = "P"
-# mods = "Command|Shift"
-
-# [[keyboard.bindings]]
-# chars = """
-# :q
-# """
-# key = "Q"
-# mods = "Command"
 
 [[keyboard.bindings]]
 chars = """
@@ -129,66 +86,15 @@ chars = "\u0014c"
 key = "T"
 mods = "Command"
 
-# [[keyboard.bindings]]
-# chars = "\u0014]"
-# key = "V"
-# mods = "Command|Shift"
-
-# [[keyboard.bindings]]
-# chars = "\u0014P"
-# key = "T"
-# mods = "Command|Shift"
-
 [[keyboard.bindings]]
 chars = "\u0014x"
 key = "W"
 mods = "Command"
 
-# [[keyboard.bindings]]
-# chars = "\u0014z"
-# key = "Z"
-# mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u00014n"
-key = "Tab"
-mods = "Control"
-
+# Change Tmux Window name
 [[keyboard.bindings]]
 chars = "\u0014,"
 key = "Comma"
-mods = "Command"
-
-# [[keyboard.bindings]]
-# chars = """
-# :ZenMode
-# """
-# key = "Period"
-# mods = "Command"
-#
-# [[keyboard.bindings]]
-# chars = "\u000F"
-# key = "LBracket"
-# mods = "Command"
-#
-# [[keyboard.bindings]]
-# chars = "\u0014p"
-# key = "LBracket"
-# mods = "Command|Shift"
-#
-# [[keyboard.bindings]]
-# chars = "\t"
-# key = "RBracket"
-# mods = "Command"
-#
-# [[keyboard.bindings]]
-# chars = "\u0014n"
-# key = "RBracket"
-# mods = "Command|Shift"
-
-[[keyboard.bindings]]
-chars = "\u0014:"
-key = "Semicolon"
 mods = "Command"
 
 [[keyboard.bindings]]
