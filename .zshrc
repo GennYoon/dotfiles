@@ -16,6 +16,16 @@ alias vimrc="vim ~/.config/nvim"
 alias tmuxrc="vim ~/.config/tmux"
 alias alarc="vim ~/.config/alacritty/alacritty.toml"
 
+# Brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Starship
+eval "$(starship init zsh)"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+
 
 # nvm이 설치되어 있어야합니다.
 # 프로젝내부에 .nvmrc 파일을 인식하여 node를 해당버전으로 변경시킵니다.
@@ -40,3 +50,5 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+

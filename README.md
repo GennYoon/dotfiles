@@ -2,6 +2,8 @@
   <h3>GennYoon's Dotfiles</h3>
 </div>
 
+![terminal]("./images/terminal.png")
+
 #### Install
 
 Just run:
