@@ -11,10 +11,10 @@ if [ ! -d "$CONFIG" ]; then
 fi
 
 ln -s ~/dotfiles/ide.sh ~/.config/ide.sh
-ln -s ~/dotfiles/.config/nvim ~/.config
-ln -s ~/dotfiles/.config/tmux ~/.config
-ln -s ~/dotfiles/.config/kitty ~/.config
-ln -s ~/dotfiles/.config/neofetch ~/.config
+ln -s ~/dotfiles/.config/nvim ~/.config/nvim
+ln -s ~/dotfiles/.config/tmux ~/.config/tmux
+ln -s ~/dotfiles/.config/kitty ~/.config/kitty
+ln -s ~/dotfiles/.config/neofetch ~/.config/neofetch
 
 # Starship을 설치합니다.
 sh -C "$(curl -sS https://starship.rs/install.sh)" -y -f
