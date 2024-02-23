@@ -1,0 +1,243 @@
+import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+opacity = 0.9
+
+[window.padding]
+x = 25
+y = 20
+
+[font]
+size = 14.5
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Medium Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Medium"
+
+[[keyboard.bindings]]
+chars = "^"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "$"
+key = "Right"
+mods = "Command"
+
+# [[keyboard.bindings]]
+# chars = "\u0014 "
+# key = "C"
+# mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0014\""
+key = "E"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0014%"
+key = "E"
+mods = "Command|Shift"
+
+# [[keyboard.bindings]]
+# chars = """
+# :Grep
+# """
+# key = "F"
+# mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00014[/"
+key = "F"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0014g"
+key = "G"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0014G"
+key = "G"
+mods = "Command|Shift"
+
+# [[keyboard.bindings]]
+# chars = "\u0014T"
+# key = "J"
+# mods = "Command"
+#
+# [[keyboard.bindings]]
+# chars = "\u0014T"
+# key = "K"
+# mods = "Command"
+
+# [[keyboard.bindings]]
+# chars = "\u0014L"
+# key = "L"
+# mods = "Command"
+#
+# [[keyboard.bindings]]
+# chars = "\u0014u"
+# key = "O"
+# mods = "Command"
+
+# [[keyboard.bindings]]
+# chars = """
+# :GoToFile
+# """
+# key = "P"
+# mods = "Command"
+#
+# [[keyboard.bindings]]
+# chars = """
+# :GoToCommand
+# """
+# key = "P"
+# mods = "Command|Shift"
+
+# [[keyboard.bindings]]
+# chars = """
+# :q
+# """
+# key = "Q"
+# mods = "Command"
+
+[[keyboard.bindings]]
+chars = """
+\u001B:w
+"""
+key = "S"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = """
+\u001B:wq
+"""
+key = "S"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0014c"
+key = "T"
+mods = "Command"
+
+# [[keyboard.bindings]]
+# chars = "\u0014]"
+# key = "V"
+# mods = "Command|Shift"
+
+# [[keyboard.bindings]]
+# chars = "\u0014P"
+# key = "T"
+# mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0014x"
+key = "W"
+mods = "Command"
+
+# [[keyboard.bindings]]
+# chars = "\u0014z"
+# key = "Z"
+# mods = "Command"
+
+# Change Tmux Window name
+[[keyboard.bindings]]
+chars = "\u0014,"
+key = "Comma"
+mods = "Command"
+
+# [[keyboard.bindings]]
+# chars = """
+# :ZenMode
+# """
+# key = "Period"
+# mods = "Command"
+#
+# [[keyboard.bindings]]
+# chars = "\u000F"
+# key = "LBracket"
+# mods = "Command"
+#
+# [[keyboard.bindings]]
+# chars = "\u0014p"
+# key = "LBracket"
+# mods = "Command|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\t"
+# key = "RBracket"
+# mods = "Command"
+#
+# [[keyboard.bindings]]
+# chars = "\u0014n"
+# key = "RBracket"
+# mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0014:"
+key = "Semicolon"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00141"
+key = "Key1"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00142"
+key = "Key2"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00143"
+key = "Key3"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00144"
+key = "Key4"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00145"
+key = "Key5"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00146"
+key = "Key6"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00147"
+key = "Key7"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00148"
+key = "Key8"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00149"
+key = "Key9"
+mods = "Command"
