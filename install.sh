@@ -1,14 +1,22 @@
 #!/bin/bash
 
+CONFIG="~/.config"
+
 # Install all brew packages
 brew bundle
+
+# 폴더가 존재하지 않으면 생성합니다.
+if [ ! -d "$CONFIG" ]; then
+	mkdir -p $CONFIG
+fi
 
 ln -s ~/dotfiles/ide.sh ~/.config/ide.sh
 ln -s ~/dotfiles/.config/nvim ~/.config
 ln -s ~/dotfiles/.config/tmux ~/.config
-ln -s ~/dotfiles/.config/alacritty ~/.config
+ln -s ~/dotfiles/.config/kitty ~/.config
+ln -s ~/dotfiles/.config/neofetch ~/.config
 
-# Install Starship
+# Starship을 설치합니다.
 sh -C "$(curl -sS https://starship.rs/install.sh)" -y -f
 eval "$(starship init zsh)"
 

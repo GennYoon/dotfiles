@@ -16,6 +16,10 @@ alias vimrc="vim ~/.config/nvim"
 alias tmuxrc="vim ~/.config/tmux"
 alias alarc="vim ~/.config/alacritty/alacritty.toml"
 
+# brew를 통해 설치한 zsh의 plugin으로 자동완성과 명령어 하이라이트입니다.
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -51,4 +55,4 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-
+neofetch

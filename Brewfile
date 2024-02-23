@@ -17,7 +17,6 @@ brew "wget"
 brew "arl/arl/gitmux"
 brew "gum"
 
-
 brew "cocoapods"
 brew "neovim"
 
@@ -47,6 +46,9 @@ brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
+# Neofetch
+brew "neofetch"
+brew "imagemagick"
 
 #  Terraform
 brew "tflint"
@@ -74,7 +76,7 @@ cask "raycast" # Keyboard Shortcut
 cask "zoom" # Video Conferencing
 cask "blender" # 3D Modeling
 
-cask "alacritty"
+cask "kitty"
 
 cask "font-jetbrains-mono-nerd-font" # Nerd Font
 cask "font-symbols-only-nerd-font" # Symbol Font
