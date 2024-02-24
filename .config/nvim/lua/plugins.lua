@@ -83,6 +83,15 @@ return {
     },
   },
 
+  "folke/todo-comments.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  opts = {},
+
+  -- image
+  {
+    "3rd/image.nvim",
+  },
+
   -- Nvimtree (File Explorer)
   {
     "nvim-neo-tree/neo-tree.nvim",

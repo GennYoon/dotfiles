@@ -46,8 +46,8 @@ brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
-# Neofetch
-brew "neofetch"
+# Neovim Image
+brew "luarocks"
 brew "imagemagick"
 
 #  Terraform
