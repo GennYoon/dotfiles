@@ -14,7 +14,7 @@ alias tk="tmux kill-session -t"
 alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.config/nvim"
 alias tmuxrc="vim ~/.config/tmux"
-alias alarc="vim ~/.config/alacritty/alacritty.toml"
+alias kittyrc="vim ~/.config/kitty/kitty.conf"
 
 # brew를 통해 설치한 zsh의 plugin으로 자동완성과 명령어 하이라이트입니다.
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
