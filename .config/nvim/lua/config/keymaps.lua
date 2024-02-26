@@ -1,6 +1,5 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
 
 -- Modes
 -- normal_mode = "n",
@@ -16,25 +15,28 @@ local term_opts = { silent = true }
 -- M <option>
 -- D <command>
 
+keymap.set("n", "x", "_x")
+
 -- Insert --
 -- Press jk fast to enter
 keymap.set("i", "jj", "<ESC>", opts)
-
--- Tab Control (Complete)
-keymap.set("n", "te", ":tabedit")
-keymap.set("n", "<Tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-Tab>", ":tabprev<Return>", opts)
-
--- -- Move text up and down (Complete)
-keymap.set("n", "<M-Up>", ":m .-2<CR>", opts)
-keymap.set("n", "<M-Down>", ":m .+1<CR>", opts)
 
 -- Increment / Decrement (Complete)
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
 -- Select All (Complete)
-keymap.set("n", "<D-a>", "gg<S-v>G")
+keymap.set("n", "<C-a>", "gg<S-v>G")
+
+-- Tab Control (Complete)
+keymap.set("n", "te", ":tabedit")
+keymap.set("n", "<Tab>", ":tabnext<Return>", opts)
+keymap.set("n", "<s-Tab>", ":tabprev<Return>", opts)
+keymap.set("n", "tw", ":tabclose<Return>", opts)
+
+-- Move text up and down (Complete)
+keymap.set("n", "<M-Up>", ":m .-2<CR>", opts)
+keymap.set("n", "<M-Down>", ":m .+1<CR>", opts)
 
 -- Split window (Complete)
 keymap.set("n", "ss", ":split<Return>", opts)
@@ -53,6 +55,10 @@ keymap.set("n", "<C-w><left>", "<C-w><")
 keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
+
+keymap.set("n", "<C-j>", function()
+  vim.diagnostic.goto_next()
+end, opts)
 
 -- Visual --
 -- Stay in indent mode (Complete)

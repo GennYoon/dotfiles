@@ -165,17 +165,7 @@ local mappings = {
 
   --Toggle Term
   t = {
-    name = "Terminal/Test",
-    r = { "<cmd>lua require('neotest').run.run()<cr>", "Run Nearest Test" },
-    d = { "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>", "Run Current Debug" },
-    l = { "<cmd>lua require('neotest').run.run_last()<cr>", "Run Last Test" },
-    f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "Run Current File" },
-    F = { "<cmd>lua require('neotest').run.run(vim.fn.getcwd())<cr>", "Run All File" },
-    w = { "<cmd>lua require('neotest').run.run({ jestCommand = 'npm test -- --watch ' })<cr>", "Watch All File Test" },
-    s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Test Summary" },
-    o = { "<cmd>lua require('neotest').output.open({ enter = true })<cr>", "Open Output" },
-    O = { "<cmd>lua require('neotest').output_panel.toggle()<cr>", "Toggle Output Panel" },
-    S = { "<cmd>lua require('neotest').run.stop()<cr>", "Stop Test" },
+    name = "Terminal",
     t = { "<cmd>ToggleTerm direction=float<cr>", "Float Terminal" }, -- Floating Terminal
     -- n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" }, -- NodeJS Terminal
     -- p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" }, -- Python Terminal
