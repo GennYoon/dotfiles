@@ -17,11 +17,6 @@ return {
     dependencies = "nvim-tree/nvim-web-devicons",
   },
 
-  -- Codeium
-  {
-    "Exafunction/codeium.vim",
-  },
-
   -- Colorscheme
   {
     "folke/tokyonight.nvim",

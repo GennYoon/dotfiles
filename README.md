@@ -1,41 +1,14 @@
-<div align="center">
-  <h3>GennYoon's Dotfiles</h3>
-</div>
+# GennYoon's dotfiles
 
-![terminal](./images/terminal.png)
+These are the dotfiles I use during development work. We will seek out new ways to improve our work and will continually update this repository. These are the settings I use, but I hope you find something useful here.
 
-#### Install
+# Requirements and tools that I use
 
-Just run:
-
-```bash
-git clone https://github.com/gennyoon/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-source install.sh
-```
-
-Set your git credentials
-
-```bash
-git config --global user.name = "your name"
-git config --global user.email = "your@email.com"
-git config --global github.user "your-github-username"
-```
-
-#### Terminal
-
-- Kitty 0.32.2
-- Neovim >= 0.9.0 (needs to be built with LuaJIT)
-- Git >= 2.19.0 (for partial clones support)
-- OhMyZsh
-- Starship
--
-
-#### Tmux
-
-#### Nvim
-
-- [LazyGit](https://github.com/kdheepak/lazygit.nvim?tab=readme-ov-file)
-- [Neotree](https://github.com/nvim-neo-tree/neo-tree.nvim?tab=readme-ov-file)
-- [Todo Comments](https://github.com/folke/todo-comments.nvim?tab=readme-ov-file)
--
+- <a href="https://sw.kovidgoyal.net/kitty/" target="_blank">Kitty</a> - Terminal Emulator
+- Eza - Modern replacement for `ls`
+- <a href="https://www.nerdfonts.com/" target="_blank">Nerd Font</a> - Allows for icons and ligatures in the terminal, any patched font will do
+- <a href="https://formulae.brew.sh/formula/neovim" target="_blank">Neovim</a> - Neovim is an extensible, modern text editor that builds upon Vim's powerful features to enhance developer productivity and experience.
+- <a href="https://github.com/catppuccin/nvim" target="_blank">Cappuccin</a> - The colorscheme I use for NeoVim and Tmux
+- <a href="https://github.com/BurntSushi/ripgrep" target="_blank">ripgrep</a>
+- <a href="https://github.com/jesseduffield/lazygit" target="_blank">lazygit</a> - Easy Git GUI
+- <a href="https://github.com/dlvhdr/gh-dash" target="_blank">gh-dash</a> - Easy Git GUI

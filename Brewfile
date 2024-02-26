@@ -55,6 +55,9 @@ brew "tflint"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/terraform-ls"
 
+brew "cmatrix"
+
+# Change path
 brew "zoxide"
 
 # Cask

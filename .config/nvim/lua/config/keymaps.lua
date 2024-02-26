@@ -29,11 +29,6 @@ keymap.set("n", "<s-Tab>", ":tabprev<Return>", opts)
 keymap.set("n", "<M-Up>", ":m .-2<CR>", opts)
 keymap.set("n", "<M-Down>", ":m .+1<CR>", opts)
 
--- Codeium Accept (Complete)
-keymap.set("i", "<C-g>", function()
-  return vim.fn["codeium#Accept"]()
-end, { expr = true })
-
 -- Increment / Decrement (Complete)
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
