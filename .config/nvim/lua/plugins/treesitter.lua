@@ -14,6 +14,7 @@ return {
         "javascript",
         "typescript",
         "tsx",
+        "vue",
         "markdown",
         "yaml",
       },
