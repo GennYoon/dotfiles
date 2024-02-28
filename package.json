@@ -1,0 +1,14 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "These are my dotfiles.",
+  "keywords": [
+    "gennyoon",
+    "neovim",
+    "kitty",
+    "tmux",
+    "zsh",
+    "dotfiles"
+  ],
+  "author": "GennYoon"
+}

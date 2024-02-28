@@ -34,6 +34,9 @@ brew "fd"
 brew "tmux"
 brew "git"
 
+brew "libpq"
+brew "redis"
+
 # Github
 brew "gh"
 
