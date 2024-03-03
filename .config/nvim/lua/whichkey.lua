@@ -88,7 +88,6 @@ local mappings = {
   ["p"] = { "<cmd>Lazy<CR>", "Plugin Manager" }, -- Invoking plugin Manager
   ["q"] = { "<cmd>wqall!<CR>", "Quit" }, -- Quit Neovim after saving the file
   ["r"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Reformat Code" },
-  ["u"] = { "<cmd>lua require('undotree').toggle()<CR>", "Undo-Tree" }, -- Undo History
   ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
   ["o"] = { "<cmd>Octo<CR>", "Octo" },
 
@@ -100,18 +99,6 @@ local mappings = {
   -- Git
   g = {
     name = "Git",
-    i = {
-      l = { "<cmd>Octo issue list assignee=GennYoon<cr>", "Issue List" },
-      L = { "<cmd>Octo issue list<cr>", "Issue List" },
-      c = { "<cmd>Octo issue create<cr>", "Issue Create" },
-      "Issue",
-    },
-    p = {
-      l = { "<cmd>Octo pr list createdBy=GennYoon<cr>", "Pull Request List" },
-      L = { "<cmd>Octo pr list<cr>", "Pull Request List" },
-      c = { "<cmd>Octo pr create<cr>", "Create Pull Request" },
-      "Pull Request",
-    },
     -- j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
     -- k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
     -- l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
@@ -120,7 +107,8 @@ local mappings = {
     -- R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
     -- s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
     -- u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk" },
-    o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+    o = { "<cmd>Octo<cr>", "Octo" },
+    s = { "<cmd>Telescope git_status<cr>", "Open changed file" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
     d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff" },
@@ -149,7 +137,7 @@ local mappings = {
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     f = { "<cmd>Telescope find_files<cr>", "Find files" },
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-    g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
+    G = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
   },
 
   s = {
@@ -167,10 +155,6 @@ local mappings = {
   t = {
     name = "Terminal",
     t = { "<cmd>ToggleTerm direction=float<cr>", "Float Terminal" }, -- Floating Terminal
-    -- n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" }, -- NodeJS Terminal
-    -- p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" }, -- Python Terminal
-    -- h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" }, -- Horizontal Terminal
-    -- v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" }, -- Vertical Terminal
   },
 }
 

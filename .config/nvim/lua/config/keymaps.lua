@@ -1,6 +1,10 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Default keymap delete
+keymap.del("n", "<leader>o") -- Octo
+keymap.del("n", "<leader>gg") -- Lazygit
+
 -- Modes
 -- normal_mode = "n",
 -- insert_mode = "i",
@@ -14,7 +18,6 @@ local opts = { noremap = true, silent = true }
 -- C <control>
 -- M <option>
 -- D <command>
-
 keymap.set("n", "x", "_x")
 
 -- Insert --

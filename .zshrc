@@ -5,6 +5,10 @@ alias vim="nvim"
 alias ide="sh ~/.config/ide.sh"
 alias tf="terraform"
 
+# Python
+alias pip="pip3"
+alias python="python3"
+
 # Tmux
 alias tl="tmux ls"
 alias ta="tmux attach -t"
@@ -55,3 +59,4 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
