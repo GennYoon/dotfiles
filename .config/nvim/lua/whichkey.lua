@@ -89,7 +89,6 @@ local mappings = {
   ["q"] = { "<cmd>wqall!<CR>", "Quit" }, -- Quit Neovim after saving the file
   ["r"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Reformat Code" },
   ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
-  ["o"] = { "<cmd>Octo<CR>", "Octo" },
 
   ["<tab>"] = {
     name = "Tab",
@@ -99,14 +98,6 @@ local mappings = {
   -- Git
   g = {
     name = "Git",
-    -- j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-    -- k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-    -- l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-    -- p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-    -- r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-    -- R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-    -- s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-    -- u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk" },
     o = { "<cmd>Octo<cr>", "Octo" },
     s = { "<cmd>Telescope git_status<cr>", "Open changed file" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
@@ -122,22 +113,13 @@ local mappings = {
     R = { "<cmd>vim.lsp.buf.reference<cr>", "Code Reference" },
   },
 
-  -- LSP
-  l = {
-    name = "LSP",
-    i = { "<cmd>LspInfo<cr>", "Info" },
-    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-    s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-    S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols" },
-  },
-
   -- Telescope
   f = {
     name = "File Search",
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     f = { "<cmd>Telescope find_files<cr>", "Find files" },
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-    G = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
+    g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
   },
 
   s = {

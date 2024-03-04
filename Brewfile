@@ -87,8 +87,6 @@ cask "kitty"
 cask "font-jetbrains-mono-nerd-font" # Nerd Font
 cask "font-symbols-only-nerd-font" # Symbol Font
 
-
-tap "epk/epk"
-cask "font-sf-mono-nerd-font"
+cask "acreom"
 
 brew "starship"

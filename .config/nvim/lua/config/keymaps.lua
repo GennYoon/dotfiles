@@ -2,7 +2,6 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 -- Default keymap delete
-keymap.del("n", "<leader>o") -- Octo
 keymap.del("n", "<leader>gg") -- Lazygit
 
 -- Modes
