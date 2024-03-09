@@ -12,12 +12,21 @@ brew "cask"
 brew "ruby"
 brew "rbenv"
 
+# App Develop
+# React Native
+tap "homebrew/cask-versions"
+brew "watchman"
+brew "ios-deploy"
+brew "cocoapods"
+cask "zulu17"
+
+
+
 # Brew
 brew "wget"
 brew "arl/arl/gitmux"
 brew "gum"
 
-brew "cocoapods"
 brew "neovim"
 
 brew "lazygit"
@@ -75,7 +84,7 @@ cask "flutter" # Flutter
 cask "docker" # Container
 cask "android-studio" # Android IDE
 cask "notion" # Notes
-cask "temurin" # Java
+# cask "temurin" # Java
 cask "figma" # Design
 cask "devtoys" # DevTools
 cask "raycast" # Keyboard Shortcut
