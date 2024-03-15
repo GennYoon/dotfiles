@@ -18,7 +18,7 @@ return {
 
   -- lsp servers
   {
-    "neovi^m/nvim-lspconfig",
+    "neovim/nvim-lspconfig",
     opts = {
       inlay_hints = { enabled = true },
       ---@type lspconfig.options
