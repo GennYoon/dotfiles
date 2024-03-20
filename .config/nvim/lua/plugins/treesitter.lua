@@ -1,7 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    -- tag = "v0.9.1",
+    build = ":TSUpdate",
     opts = {
       ensure_installed = {
         "cpp",
@@ -9,8 +9,8 @@ return {
         "java",
         "kotlin",
         "go",
-        "rust",
         "python",
+        "html",
         "javascript",
         "typescript",
         "tsx",
@@ -33,7 +33,7 @@ return {
         disable = { "" },
         additional_vim_regex_highlighting = true,
       },
-      indent = { enable = true, disable = { "yaml" } },
+      indent = { enable = true },
       autotag = {
         enable = true,
         enable_rename = true,
