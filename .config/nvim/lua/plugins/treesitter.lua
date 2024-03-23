@@ -10,7 +10,6 @@ return {
         "kotlin",
         "go",
         "python",
-        "html",
         "javascript",
         "typescript",
         "tsx",
