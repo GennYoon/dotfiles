@@ -13,7 +13,8 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
       opts = {
-        colorscheme = "tokyonight",
+        -- colorscheme = "tokyonight",
+        colorscheme = "catppuccin",
         news = { lazyvim = true, neovim = true },
       },
     },
@@ -29,13 +30,12 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.terraform" },
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.ui.alpha" },
-    { import = "lazyvim.plugins.extras.coding.codeium" },
-    { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
+    -- { import = "lazyvim.plugins.extras.coding.codeium" },
+    -- { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     -- import/override with your pluginsy
     { import = "plugins" },
   },
   defaults = {
-
     lazy = false,
     version = false, -- always use the latest git commit
   },

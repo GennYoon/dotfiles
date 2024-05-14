@@ -12,3 +12,5 @@ These are the dotfiles I use during development work. We will seek out new ways 
 - <a href="https://github.com/BurntSushi/ripgrep" target="_blank">ripgrep</a>
 - <a href="https://github.com/jesseduffield/lazygit" target="_blank">lazygit</a> - Easy Git GUI
 - <a href="https://github.com/dlvhdr/gh-dash" target="_blank">gh-dash</a> - Easy Git GUI
+
+[ColorScheme List](https://vimcolorschemes.com/i/trending)

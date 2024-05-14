@@ -4,7 +4,8 @@ return {
     build = ":TSUpdate",
     opts = {
       ensure_installed = {
-        "cpp",
+        "jsdoc",
+        "c",
         "lua",
         "java",
         "kotlin",
@@ -15,7 +16,10 @@ return {
         "tsx",
         "vue",
         "markdown",
+        "markdown_inline",
         "yaml",
+        "json",
+        "jsonc",
       },
       query_linter = {
         enbale = true,

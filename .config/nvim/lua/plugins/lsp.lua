@@ -6,12 +6,12 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "luacheck",
         "shellcheck",
-        "shfmt",
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
-        "python-lsp-server",
-        "gopls",
+        -- "shfmt",
+        -- "python-lsp-server",
+        -- "gopls",
       })
     end,
   },
@@ -23,6 +23,13 @@ return {
       inlay_hints = { enabled = true },
       ---@type lspconfig.options
       servers = {
+        eslint = {
+          settings = {
+            -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
+            -- eslint가 cwd 루트 대신 하위 폴더에 배치될 때 eslintrc를 찾는 데 도움이 됩니다.
+            workingDirectories = { mode = "auto" },
+          },
+        },
         cssls = {
           settings = {
             css = {
@@ -147,7 +154,38 @@ return {
           },
         },
       },
-      setup = {},
+      setup = {
+        eslint = function()
+          local function get_client(buf)
+            return LazyVim.lsp.get_clients({ name = "eslint", bufnr = buf })[1]
+          end
+
+          local formatter = LazyVim.lsp.formatter({
+            name = "eslint: lsp",
+            primary = false,
+            priority = 200,
+            filter = "eslint",
+          })
+
+          -- Use EslintFixAll on Neovim < 0.10.0
+          if not pcall(require, "vim.lsp._dynamic") then
+            formatter.name = "eslint: EslintFixAll"
+            formatter.sources = function(buf)
+              local client = get_client(buf)
+              return client and { "eslint" } or {}
+            end
+            formatter.format = function(buf)
+              local client = get_client(buf)
+              if client then
+                local diag = vim.diagnostic.get(buf, { namespace = vim.lsp.diagnostic.get_namespace(client.id) })
+                if #diag > 0 then
+                  vim.cmd("EslintFixAll")
+                end
+              end
+            end
+          end
+        end,
+      },
     },
   },
   {
