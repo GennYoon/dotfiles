@@ -2,8 +2,8 @@ return {
   {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
-    config = function()
-      require("bufferline").setup()
+    config = function(_, opts)
+      require("bufferline").setup(opts)
       require("bufferline").setup({
         options = {
           mode = "tabs",
