@@ -146,6 +146,16 @@ return {
           root_dir = function(...)
             return require("lspconfig.util").root_pattern(".git")(...)
           end,
+          settings = {
+            tailwindCSS = {
+              experimental = {
+                classRegex = {
+                  { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+                  { "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+                },
+              },
+            },
+          },
         },
         denols = {
           cmd = { "deno", "lsp" },
