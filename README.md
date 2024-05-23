@@ -14,3 +14,5 @@ These are the dotfiles I use during development work. We will seek out new ways 
 - <a href="https://github.com/dlvhdr/gh-dash" target="_blank">gh-dash</a> - Easy Git GUI
 
 [ColorScheme List](https://vimcolorschemes.com/i/trending)
+
+lsp - https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md

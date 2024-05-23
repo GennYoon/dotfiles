@@ -36,6 +36,10 @@ vim.opt.mouse = ""
 -- Add asterisks in block comments
 vim.opt.formatoptions:append({ "r" })
 
+vim.g.markdown_fenced_languages = {
+  "ts=typescript",
+}
+
 vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
 vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
 vim.cmd([[au BufNewFile,BufRead *.tf setf terraform]])
