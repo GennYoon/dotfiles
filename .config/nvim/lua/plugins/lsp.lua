@@ -157,30 +157,30 @@ return {
             },
           },
         },
-        denols = {
-          cmd = { "deno", "lsp" },
-          filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
-          root_dir = function(...)
-            return require("lspconfig.util").root_pattern("deno.json", "deno.jsonc", ".git")(...)
-          end,
-          settings = {
-            deno = {
-              enable = true,
-              suggest = {
-                imports = {
-                  hosts = {
-                    ["https://deno.land"] = true,
-                  },
-                },
-              },
-            },
-          },
-          -- handlers = {
-          --   ["textDocument/definition"] = <function 1>,
-          --   ["textDocument/references"] = <function 1>,
-          --   ["textDocument/typeDefinition"] = <function 1>,
-          -- }
-        },
+        -- denols = {
+        --   cmd = { "deno", "lsp" },
+        --   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+        --   root_dir = function(...)
+        --     return require("lspconfig.util").root_pattern("deno.json", "deno.jsonc", ".git")(...)
+        --   end,
+        --   settings = {
+        --     deno = {
+        --       enable = true,
+        --       suggest = {
+        --         imports = {
+        --           hosts = {
+        --             ["https://deno.land"] = true,
+        --           },
+        --         },
+        --       },
+        --     },
+        --   },
+        --   -- handlers = {
+        --   --   ["textDocument/definition"] = <function 1>,
+        --   --   ["textDocument/references"] = <function 1>,
+        --   --   ["textDocument/typeDefinition"] = <function 1>,
+        --   -- }
+        -- },
         tsserver = {
           root_dir = function(...)
             return require("lspconfig.util").root_pattern(".git")(...)
@@ -359,13 +359,13 @@ return {
         })
       end
 
-      if LazyVim.lsp.get_config("denols") and LazyVim.lsp.get_config("tsserver") then
-        local is_deno = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")
-        LazyVim.lsp.disable("tsserver", is_deno)
-        LazyVim.lsp.disable("denols", function(root_dir)
-          return not is_deno(root_dir)
-        end)
-      end
+      -- if LazyVim.lsp.get_config("denols") and LazyVim.lsp.get_config("tsserver") then
+      --   local is_deno = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")
+      --   LazyVim.lsp.disable("tsserver", is_deno)
+      --   LazyVim.lsp.disable("denols", function(root_dir)
+      --     return not is_deno(root_dir)
+      --   end)
+      -- end
     end,
   },
   {
