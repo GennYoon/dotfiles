@@ -2,6 +2,10 @@
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+tap "FelixKratz/formulae"
+
+
+brew "sketchybar"
 
 # 필수
 # brew "firebase-cli"
