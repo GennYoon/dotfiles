@@ -1,59 +1,57 @@
 return {
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    opts = {
+  "nvim-treesitter/nvim-treesitter",
+  event = { "BufReadPre", "BufNewFile" },
+  build = ":TSUpdate",
+  dependencies = {
+    "windwp/nvim-ts-autotag",
+  },
+  config = function()
+    -- import nvim-treesitter plugin
+    local treesitter = require("nvim-treesitter.configs")
+
+    -- configure treesitter
+    treesitter.setup({ -- enable syntax highlighting
+      highlight = {
+        enable = true,
+      },
+      -- enable indentation
+      indent = { enable = true },
+      -- enable autotagging (w/ nvim-ts-autotag plugin)
+      autotag = {
+        enable = true,
+      },
+      -- ensure these language parsers are installed
       ensure_installed = {
-        "jsdoc",
-        "c",
-        "lua",
-        "java",
-        "kotlin",
-        "go",
-        "python",
-        "html",
+        "json",
         "javascript",
         "typescript",
         "tsx",
-        "vue",
+        "yaml",
+        "html",
+        "css",
+        "prisma",
         "markdown",
         "markdown_inline",
-        "yaml",
-        "json",
-        "jsonc",
+        "svelte",
+        "graphql",
+        "bash",
+        "lua",
+        "vim",
+        "dockerfile",
+        "gitignore",
+        "query",
+        "vimdoc",
+        "c",
       },
-      query_linter = {
-        enbale = true,
-        use_virtual_text = true,
-        lint_events = { "BufWrite", "CursorHold" },
-      },
-      sync_install = false,
-      -- 설치를 무시할 언어 목록
-      ignore_install = { "" },
-      highlight = {
-        -- false는 전체 확장 기능을 비활성화합니다.
+      incremental_selection = {
         enable = true,
-        -- 비활성화할 언어 목록
-        disable = { "" },
-        additional_vim_regex_highlighting = true,
-      },
-      indent = { enable = true },
-      autotag = {
-        enable = true,
-        enable_rename = true,
-        enable_close = true,
-        enable_close_on_slash = true,
-        filetype = { "html", "tsx", "xml" },
-      },
-      textobjects = {
-        move = {
-          enable = true,
-          goto_next_start = { ["]f"] = "@function.outer", ["]c"] = "@class.outer" },
-          goto_next_end = { ["]F"] = "@function.outer", ["]C"] = "@class.outer" },
-          goto_previous_start = { ["[f"] = "@function.outer", ["[c"] = "@class.outer" },
-          goto_previous_end = { ["[F"] = "@function.outer", ["[C"] = "@class.outer" },
+        keymaps = {
+          init_selection = "<C-space>",
+          node_incremental = "<C-space>",
+          scope_incremental = false,
+          node_decremental = "<bs>",
         },
       },
-    },
-  },
+    })
+  end,
 }
