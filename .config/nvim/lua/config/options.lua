@@ -45,31 +45,3 @@ vim.opt.swapfile = false
 vim.opt.wildignore:append({ "*/node_modules/*" })
 vim.opt.mouse = ""
 vim.opt.shell = "zsh"
-
--- vim.opt.smartindent = true
--- vim.opt.title = true
--- vim.opt.hlsearch = true
--- vim.opt.backup = false
--- vim.opt.showcmd = true
--- vim.opt.cmdheight = 0
--- vim.opt.laststatus = 0
--- vim.opt.scrolloff = 10
--- vim.opt.inccommand = "split"
--- vim.opt.smarttab = true
--- vim.opt.breakindent = true
--- vim.opt.path:append({ "**" })
--- vim.opt.splitbelow = true
--- vim.opt.splitright = true
--- vim.opt.splitkeep = "cursor"
-
--- Add asterisks in block comments
--- vim.opt.formatoptions:append({ "r" })
-
--- vim.g.markdown_fenced_languages = {
---   "ts=typescript",
--- }
---
--- vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
--- vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
--- vim.cmd([[au BufNewFile,BufRead *.tf setf terraform]])
--- vim.cmd([[au BufNewFile,BufRead *.tfvar setf terraform]])
