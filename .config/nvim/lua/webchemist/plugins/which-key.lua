@@ -28,6 +28,7 @@ return {
       ["r"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Reformat Code" },
       ["w"] = { "<cmd>w!<CR>", "Save" },
       ["<tab>"] = { name = "Tab", n = { "", "New Tab" } },
+
       -- Git
       g = {
         name = "Git",
