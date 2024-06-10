@@ -1,39 +1,19 @@
 return {
-  "stevearc/conform.nvim",
+  "numToStr/Comment.nvim",
   event = { "BufReadPre", "BufNewFile" },
+  dependencies = {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+  },
   config = function()
-    local conform = require("conform")
+    -- import comment plugin safely
+    local comment = require("Comment")
 
-    conform.setup({
-      formatters_by_ft = {
-        javascript = { "prettier" },
-        typescript = { "prettier" },
-        javascriptreact = { "prettier" },
-        typescriptreact = { "prettier" },
-        svelte = { "prettier" },
-        css = { "prettier" },
-        html = { "prettier" },
-        json = { "prettier" },
-        yaml = { "prettier" },
-        markdown = { "prettier" },
-        graphql = { "prettier" },
-        liquid = { "prettier" },
-        lua = { "stylua" },
-        python = { "isort", "black" },
-      },
-      format_on_save = {
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 1000,
-      },
+    local ts_context_commentstring = require("ts_context_commentstring.integrations.comment_nvim")
+
+    -- enable comment
+    comment.setup({
+      -- for commenting tsx, jsx, svelte, html files
+      pre_hook = ts_context_commentstring.create_pre_hook(),
     })
-
-    vim.keymap.set({ "n", "v" }, "<leader>mp", function()
-      conform.format({
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 1000,
-      })
-    end, { desc = "Format file or range (in visual mode)" })
   end,
 }
