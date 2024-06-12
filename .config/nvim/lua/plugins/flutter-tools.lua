@@ -9,6 +9,7 @@ return {
     config = function()
       require("flutter-tools").setup({})
       require("flutter-tools").setup_project({
+        { name = "Not Flavor" },
         {
           name = "Development",
           flavor = "dev",
