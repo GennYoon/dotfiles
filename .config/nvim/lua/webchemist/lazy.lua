@@ -1,22 +1,49 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+  -- bootstrap lazy.nvim
+  -- stylua: ignore
+  vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
 end
-vim.opt.rtp:prepend(lazypath)
+vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
-require("lazy").setup({ { import = "webchemist.plugins" }, { import = "webchemist.plugins.lsp" } }, {
-  checker = {
-    enabled = true,
-    notify = false,
+require("lazy").setup({
+  spec = {
+    -- add LazyVim and import its plugins
+    {
+      "LazyVim/LazyVim",
+      import = "lazyvim.plugins",
+      opts = {
+        colorscheme = "habamax",
+        news = { lazyvim = true, neovim = true },
+      },
+    },
+    -- import any extras modules here
+    { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.json" },
+    { import = "lazyvim.plugins.extras.lang.json" },
+    { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    { import = "lazyvim.plugins.extras.coding.codeium" },
+    -- import/override with your plugins
+    { import = "webchemist.plugins" },
+    -- { import = "webchemist.plugins.lsp" },
   },
-  change_detection = {
-    notify = false,
+  defaults = {
+    lazy = false,
+    version = false,
+  },
+  install = { colorscheme = { "tokyonight", "catppuccin", "habamax" } },
+  checker = { enabled = true, notify = false },
+  change_detection = { notify = false },
+  performance = {
+    rtp = {
+      -- disable some rtp plugins
+      disabled_plugins = {
+        "gzip",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+      },
+    },
   },
 })

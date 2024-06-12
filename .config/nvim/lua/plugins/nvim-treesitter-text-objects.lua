@@ -108,3 +108,4 @@ return {
     vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T)
   end,
 }
+

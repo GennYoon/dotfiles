@@ -27,16 +27,25 @@ return {
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
-        "tsserver",
-        "html",
-        "cssls",
-        "tailwindcss",
+        -- "denols", -- Deno
+        "tsserver", -- Typescript
+        "gopls", -- Go
+        "html", -- HTML
+        "cssls", -- CSS
+        "tailwindcss", -- Tailwindcss
+        "terraformls", -- Terraform
         "svelte",
+        "jsonls", -- JSON
         "lua_ls",
         "graphql",
         "emmet_ls",
         "prismals",
         "pyright",
+        "taplo", -- TOML
+        "yamlls", -- YAML
+        "mdx_analyzer", -- MDX
+        "dockerls",
+        "docker_compose_language_service",
       },
     })
 

@@ -1,47 +1,56 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  event = { "BufReadPre", "BufNewFile" },
+  dependencies = { "windwp/nvim-ts-autotag" },
+  version = false,
   build = ":TSUpdate",
-  dependencies = {
-    "windwp/nvim-ts-autotag",
+  event = { "LazyFile", "VeryLazy" },
+  lazy = vim.fn.argc(-1) == 0,
+  init = function(plugin)
+    require("lazy.core.loader").add_to_rtp(plugin)
+    require("nvim-treesitter.query_predicates")
+  end,
+  cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
+  keys = {
+    { "<c-space>", desc = "Increment Selection" },
+    { "<bs>", desc = "Decrement Selection", mode = "x" },
   },
+  opts_extend = { "ensure_installed" },
   config = function()
-    -- import nvim-treesitter plugin
     local treesitter = require("nvim-treesitter.configs")
 
-    -- configure treesitter
-    treesitter.setup({ -- enable syntax highlighting
-      highlight = {
-        enable = true,
-      },
-      -- enable indentation
+    treesitter.setup({
+      highlight = { enable = true },
       indent = { enable = true },
-      -- enable autotagging (w/ nvim-ts-autotag plugin)
-      autotag = {
-        enable = true,
-      },
-      -- ensure these language parsers are installed
+      autotag = { enable = true },
       ensure_installed = {
-        "json",
-        "javascript",
-        "typescript",
-        "tsx",
-        "yaml",
+        "bash",
+        "c",
+        "diff",
         "html",
         "css",
-        "prisma",
-        "markdown",
-        "markdown_inline",
-        "svelte",
-        "graphql",
-        "bash",
-        "lua",
-        "vim",
         "dockerfile",
         "gitignore",
+        "javascript",
+        "jsdoc",
+        "json",
+        "jsonc",
+        "lua",
+        "luadoc",
+        "luap",
+        "markdown",
+        "markdown_inline",
+        "printf",
+        "python",
+        "prisma",
         "query",
+        "regex",
+        "toml",
+        "tsx",
+        "typescript",
+        "vim",
         "vimdoc",
-        "c",
+        "xml",
+        "yaml",
       },
       incremental_selection = {
         enable = true,

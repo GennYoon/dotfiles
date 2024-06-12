@@ -21,7 +21,7 @@ keymap.set("n", "x", "_x")
 
 -- Insert --
 -- Press jk fast to enter
-keymap.set("i", "jj", "<ESC>", opts)
+keymap.set("i", "jk", "<ESC>", opts)
 
 -- Increment / Decrement (Complete)
 keymap.set("n", "+", "<C-a>")
