@@ -18,13 +18,11 @@ require("lazy").setup({
       },
     },
     -- import any extras modules here
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.coding.codeium" },
+
     -- import/override with your plugins
     { import = "plugins" },
     { import = "plugins.lsp" },
-    -- { import = "webchemist.plugins.lsp" },
   },
   defaults = { lazy = false, version = false },
   install = { colorscheme = { "tokyonight", "catppuccin", "habamax" } },
