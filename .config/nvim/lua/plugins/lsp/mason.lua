@@ -34,7 +34,7 @@ return {
         "cssls", -- CSS
         "tailwindcss", -- Tailwindcss
         "terraformls", -- Terraform
-        "svelte",
+        -- "svelte",
         "jsonls", -- JSON
         "lua_ls",
         "graphql",
