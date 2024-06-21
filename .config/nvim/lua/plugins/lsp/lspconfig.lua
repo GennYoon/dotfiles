@@ -101,13 +101,6 @@ return {
           },
         })
       end,
-      ["tailwindcss"] = function()
-        -- configure tailwindcss language server
-        lspconfig["tailwindcss"].setup({
-          capabilities = capabilities,
-          filetypes = { "css" },
-        })
-      end,
       ["graphql"] = function()
         -- configure graphql language server
         lspconfig["graphql"].setup({
