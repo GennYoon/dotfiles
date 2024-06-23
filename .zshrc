@@ -1,18 +1,19 @@
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-
 plugins=(git z)
 
-source $ZSH/oh-my-zsh.sh
-
 export LANG=en_US.UTF-8
+
+# brew를 통해 설치한 zsh의 plugin으로 자동완성과 명령어 하이라이트입니다.
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Alias
 
 alias ls="eza --icons"
 alias ll="eza -l -g --icons"
 alias lla="ll -a"
+
 alias vi="nvim"
 alias vim="nvim"
-alias ide="sh ~/.config/ide.sh"
 alias tf="terraform"
 
 # Python
@@ -24,16 +25,6 @@ alias tl="tmux ls"
 alias ta="tmux attach -t"
 alias tk="tmux kill-session -t"
 
-# configuration
-alias zshrc="vim ~/.zshrc"
-alias vimrc="vim ~/.config/nvim"
-alias tmuxrc="vim ~/.config/tmux"
-alias kittyrc="vim ~/.config/kitty/kitty.conf"
-
-# brew를 통해 설치한 zsh의 plugin으로 자동완성과 명령어 하이라이트입니다.
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -44,7 +35,6 @@ eval "$(starship init zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 
 # nvm이 설치되어 있어야합니다.
 # 프로젝내부에 .nvmrc 파일을 인식하여 node를 해당버전으로 변경시킵니다.
@@ -114,8 +104,6 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-source ~/fzf-git.sh/fzf-git.sh
-
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 
 export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
@@ -135,4 +123,5 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
+
 
