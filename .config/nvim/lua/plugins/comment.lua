@@ -1,3 +1,5 @@
+-- gcc등의 명령으로 빠른 주석처리 가능
+
 return {
   "numToStr/Comment.nvim",
   event = { "BufReadPre", "BufNewFile" },

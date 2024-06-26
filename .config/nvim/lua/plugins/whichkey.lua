@@ -18,9 +18,9 @@ return {
       noremap = true,
       nowait = true,
     }
+
     local mappings = {
       ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-      ["e"] = { "<cmd>Neotree toggle<cr>", "Explorer" },
       ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" },
       ["m"] = { "<cmd>Mason<CR>", "Plugin Manager" },
       ["p"] = { "<cmd>Lazy<CR>", "Plugin Manager" },
@@ -28,6 +28,13 @@ return {
       ["r"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Reformat Code" },
       ["w"] = { "<cmd>w!<CR>", "Save" },
       ["<tab>"] = { name = "Tab", n = { "", "New Tab" } },
+
+      -- Tree
+      e = {
+        name = "Neotree",
+        e = { "<cmd>Neotree filesystem reveal toggle<CR>", "Filesystem Explorer" },
+        E = { "<cmd>Neotree buffers reveal float<CR>", "Buffer Explorer" },
+      },
 
       -- Git
       g = {
