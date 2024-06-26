@@ -6,7 +6,7 @@ tap "FelixKratz/formulae"
 
 # Brew
 brew "wget"
-brew "arl/arl/gittmux"
+brew "arl/arl/gitmux"
 brew "gum"
 
 brew "awscli"
@@ -58,6 +58,7 @@ brew "hashicorp/tap/terraform-ls"
 brew "cmatrix"
 
 brew "zoxide"
+brew "stow"
 
 cask "slack"
 cask "1password"
