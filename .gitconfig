@@ -34,3 +34,6 @@
 [init]
 	defaultBranch = main
 
+[user]
+	email = yoonwonyoul@webchemist.net
+	name = GennYoon
