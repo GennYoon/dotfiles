@@ -27,13 +27,15 @@ alias tl="tmux ls"
 alias ta="tmux attach -t"
 alias tk="tmux kill-session -t"
 
+# Brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
 # brew를 통해 설치한 zsh의 plugin으로 자동완성과 명령어 하이라이트입니다.
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-# Brew
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Starship
 eval "$(starship init zsh)"
