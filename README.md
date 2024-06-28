@@ -17,5 +17,6 @@ These are the dotfiles I use during development work. We will seek out new ways 
 
 lsp - https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
-
 surround - 괄호, 대괄호, 따옴표등을 쌍으로 쉽게 추가, 변경, 삭제 할 수 있습니다.
+
+stow를 이용하여 관리하기 쉽게 합니다.
