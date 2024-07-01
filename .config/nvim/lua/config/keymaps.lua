@@ -58,6 +58,12 @@ keymap.set("n", "<C-w><right>", "20<C-w>>")
 keymap.set("n", "<C-w><up>", "20<C-w>+")
 keymap.set("n", "<C-w><down>", "20<C-w>-")
 
+-- Tmux --
+keymap.set("n", "<C-h>", "<cmd>NvimTmuxNavigateLeft<CR>", opts)
+keymap.set("n", "<C-j>", "<cmd>NvimTmuxNavigateDown<CR>", opts)
+keymap.set("n", "<C-k>", "<cmd>NvimTmuxNavigateUp<CR>", opts)
+keymap.set("n", "<C-l>", "<cmd>NvimTmuxNavigateRight<CR>", opts)
+
 -- keymap.set("n", "<C-j>", function()
 --   vim.diagnostic.goto_next()
 -- end, opts)
@@ -75,7 +81,6 @@ keymap.set("v", "<M-Down>", ":m .+1<CR>==", opts)
 -- Move text up and down
 keymap.set("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap.set("x", "K", ":move '<-2<CR>gv-gv", opts)
-
 
 -- -- Navigate vim panes better
 -- vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
