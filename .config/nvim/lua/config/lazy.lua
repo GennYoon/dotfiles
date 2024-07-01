@@ -23,8 +23,6 @@ require("lazy").setup({
       },
     },
     -- import any extras modules here
-    { import = "lazyvim.plugins.extras.coding.copilot" },
-    { import = "lazyvim.plugins.extras.coding.copilot-chat" },
 
     -- import/override with your plugins
     { import = "plugins" },
