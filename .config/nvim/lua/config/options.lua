@@ -45,3 +45,5 @@ vim.opt.swapfile = false
 vim.opt.wildignore:append({ "*/node_modules/*" })
 vim.opt.mouse = ""
 vim.opt.shell = "zsh"
+
+

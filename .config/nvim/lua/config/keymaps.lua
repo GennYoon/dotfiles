@@ -2,7 +2,7 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 -- Default keymap delete
-keymap.del("n", "<leader>gg") -- Lazygit
+-- keymap.del("n", "<leader>gg") -- Lazygit
 
 -- Modes
 -- normal_mode = "n",
@@ -75,3 +75,14 @@ keymap.set("v", "<M-Down>", ":m .+1<CR>==", opts)
 -- Move text up and down
 keymap.set("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap.set("x", "K", ":move '<-2<CR>gv-gv", opts)
+
+
+-- -- Navigate vim panes better
+-- vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
+-- vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
+-- vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
+-- vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
+--
+-- vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+--
+--

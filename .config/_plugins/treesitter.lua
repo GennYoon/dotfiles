@@ -1,9 +1,9 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  depends = { "windwp/nvim-ts-autotag" },
+  dependencies = { "windwp/nvim-ts-autotag" },
   version = false,
   build = ":TSUpdate",
-  event = { "VeryLazy" },
+  event = { "LazyFile", "VeryLazy" },
   lazy = vim.fn.argc(-1) == 0,
   init = function(plugin)
     require("lazy.core.loader").add_to_rtp(plugin)
@@ -15,11 +15,10 @@ return {
     { "<bs>", desc = "Decrement Selection", mode = "x" },
   },
   opts_extend = { "ensure_installed" },
-
   config = function()
-    local config = require("nvim-treesitter.configs")
+    local treesitter = require("nvim-treesitter.configs")
 
-    config.setup({
+    treesitter.setup({
       highlight = { enable = true },
       indent = { enable = true },
       autotag = { enable = true },
@@ -56,8 +55,8 @@ return {
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = "<c-space>",
-          node_incremental = "<c-space>",
+          init_selection = "<C-space>",
+          node_incremental = "<C-space>",
           scope_incremental = false,
           node_decremental = "<bs>",
         },
