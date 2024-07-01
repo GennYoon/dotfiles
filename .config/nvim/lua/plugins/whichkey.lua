@@ -31,9 +31,10 @@ return {
       f = {
         name = "Find",
       },
-      -- Test
+      -- Terminal
       t = {
-        name = "Test",
+        name = "Terminal",
+        t = { "<cmd>ToggleTerm direction=float<cr>", "Float Terminal" },
       },
     }
 
