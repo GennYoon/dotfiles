@@ -60,11 +60,12 @@ brew "cmatrix"
 brew "zoxide"
 brew "stow"
 
+cask "flutter"
+
 cask "slack"
 cask "1password"
 cask "arc"
 cask "google-chrome"
-cask "flutter"
 cask "docker"
 cask "android-studio"
 cask "noiton"
