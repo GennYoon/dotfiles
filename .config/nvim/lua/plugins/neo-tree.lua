@@ -9,8 +9,8 @@ return {
   config = function()
     require("neo-tree").setup({
       window = {
-        width = 35
-      }
+        width = 35,
+      },
     })
   end,
 }

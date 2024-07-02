@@ -1,6 +1,6 @@
 return {
   "rmagatti/auto-session",
-  config = function ()
+  config = function()
     require("auto-session").setup({
       auto_session_suppress_dirs = { "~/", "~/Workspace", "~/Downloads", "/" },
       session_lens = {
@@ -11,5 +11,5 @@ return {
       },
       -- vim.keymap.set("n", "<Leader>ls", require("auto-session.session-lens").search_session, { noremap = true, }),
     })
-  end
+  end,
 }
