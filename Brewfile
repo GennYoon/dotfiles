@@ -75,6 +75,7 @@ cask "raycast"
 # cask "blender"
 
 cask "kitty"
+cask "acreom"
 cask "font-jetbrains-meno-nerd-font"
 cask "font-symbols-only-nerd-font"
 cask "starship"
