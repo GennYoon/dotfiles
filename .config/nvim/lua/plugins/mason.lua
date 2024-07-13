@@ -32,7 +32,7 @@ return {
         "html", -- HTML
         "cssls", -- CSS
         "tailwindcss", -- Tailwindcss
-        "terraformls", -- Terraform
+        "tslint", -- Terraform
         "jsonls", -- JSON
         "lua_ls",
         "graphql",
@@ -44,6 +44,7 @@ return {
         "mdx_analyzer", -- MDX
         "dockerls",
         "docker_compose_language_service",
+        -- "terraformls", -- Terraform
         -- "denols", -- Deno
         -- "svelte",
       },

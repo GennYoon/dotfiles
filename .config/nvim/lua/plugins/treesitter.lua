@@ -48,6 +48,8 @@ return {
         "toml",
         "tsx",
         "typescript",
+        "terraform",
+        "hcl",
         "vim",
         "vimdoc",
         "xml",
