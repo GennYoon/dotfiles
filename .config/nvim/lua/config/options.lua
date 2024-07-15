@@ -45,3 +45,8 @@ vim.opt.swapfile = false
 vim.opt.wildignore:append({ "*/node_modules/*" })
 vim.opt.mouse = ""
 vim.opt.shell = "zsh"
+
+vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
+vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
+vim.cmd([[au BufNewFile,BufRead *.tf setf terraform]])
+vim.cmd([[au BufNewFile,BufRead *.tfvar setf terraform]])
