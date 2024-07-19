@@ -23,6 +23,7 @@ require("lazy").setup({
       },
     },
     -- import any extras modules here
+    { import = "lazyvim.plugins.extras.test.core" },
 
     -- import/override with your plugins
     { import = "plugins" },
