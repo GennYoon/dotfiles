@@ -15,7 +15,6 @@ brew "cask"
 # Supabase
 brew "supabase/tap/supabase"
 
-
 # Flutter
 brew "ruby"
 brew "rbenv"
@@ -23,7 +22,13 @@ brew "watchman"
 brew "ios-deploy"
 brew "cocoapods"
 cask "zulu@17"
+cask "flutter"
+cask "android-studio"
 
+# Neovim
+cask "kitty"
+cask "starship"
+brew "zsh"
 brew "neovim"
 brew "lazygit"
 brew "tree-sitter"
@@ -43,14 +48,15 @@ brew "redis"
 
 brew "gh"
 
-brew "nvm"
-brew "pnpm"
-
-brew "zsh"
-
 brew "luarocks"
 brew "imagemagick"
 
+
+# Node
+brew "nvm"
+brew "pnpm"
+
+# Terraform
 brew "tflint"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/terraform-ls"
@@ -60,23 +66,18 @@ brew "cmatrix"
 brew "zoxide"
 brew "stow"
 
-cask "flutter"
-
 cask "slack"
 cask "1password"
 cask "arc"
 cask "google-chrome"
 cask "docker"
-cask "android-studio"
 cask "noiton"
 cask "figma"
 cask "devtoys"
-cask "raycast"
+# cask "raycast"
 # cask "blender"
 
-cask "kitty"
 cask "obsidian"
 cask "font-jetbrains-meno-nerd-font"
 cask "font-symbols-only-nerd-font"
-cask "starship"
 
