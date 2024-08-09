@@ -4,6 +4,10 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "FelixKratz/formulae"
 
+# Jira
+tap "ankitpokhrel/jira-cli"
+brew "jira-cli"
+
 # Brew
 brew "wget"
 brew "arl/arl/gitmux"
