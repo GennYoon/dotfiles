@@ -5,3 +5,5 @@ Brewfile.lock.json
 **/neofetch/images/
 
 **/github-copilot/
+
+**/.config/configstore/
