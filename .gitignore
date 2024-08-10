@@ -7,3 +7,5 @@ Brewfile.lock.json
 **/github-copilot/
 
 **/.config/configstore/
+**/.config/_plugins/
+**/.config/raycast/
