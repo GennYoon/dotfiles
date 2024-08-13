@@ -74,6 +74,7 @@ brew "hashicorp/tap/terraform-ls"
 brew "stow"
 
 # 필수 설치 프로그램
+cask "wezterm"
 cask "kitty"
 cask "google-chrome"
 cask "slack"
@@ -91,5 +92,6 @@ cask "obsidian"
 
 # Font
 cask "font-jetbrains-mono-nerd-font"
+cask "font-meslo-lg-nerd-font"
 cask "font-symbols-only-nerd-font"
 

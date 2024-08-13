@@ -24,3 +24,6 @@ _darcs
 Makefile
 Brewfile
 Brewfile.lock.json
+
+tmux.conf.temp
+coolnight.itermcolors
