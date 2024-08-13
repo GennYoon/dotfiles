@@ -17,8 +17,8 @@ return {
         hide_gitignored = true,
         hide_hidden = true,
         filtered_items = {
-          always_show = { ".config" },
-          always_show_by_pattern = { ".env*" },
+          always_show = { ".config", ".gitignore", ".gitconfig" },
+          always_show_by_pattern = { ".env*", ".tmux*" },
           naver_show = { ".DS_Store" },
         },
       },

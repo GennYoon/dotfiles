@@ -27,6 +27,7 @@ require("lazy").setup({
 
     -- import/override with your plugins
     { import = "plugins" },
+    { import = "plugins.lsp" },
   },
   defaults = { lazy = false, version = false },
   install = { colorscheme = { "tokyonight", "catppuccin", "gruvbox", "habamax" } },
