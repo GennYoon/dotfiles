@@ -4,6 +4,9 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "FelixKratz/formulae"
 
+# Github Actions Test
+brew "act"
+
 # Jira
 tap "ankitpokhrel/jira-cli"
 brew "jira-cli"
@@ -12,9 +15,10 @@ brew "jira-cli"
 brew "wget"
 brew "arl/arl/gitmux"
 brew "gum"
-
-brew "awscli"
 brew "cask"
+
+# AWS
+brew "awscli"
 
 # Supabase
 brew "supabase/tap/supabase"
@@ -30,14 +34,17 @@ cask "flutter"
 cask "android-studio"
 
 # Neovim
-cask "kitty"
-cask "starship"
+brew "starship"
 brew "zsh"
 brew "neovim"
 brew "lazygit"
+brew "zsh-autosuggestions" # zsh terminal에서 자동완성
+brew "zsh-syntax-highlighting" # zsh terminal에서 문법 하이라이트
+brew "zoxide" # z path로 이동
+
 brew "tree-sitter"
-brew "gopls"
-brew "go"
+# brew "gopls"
+# brew "go"
 
 brew "ripgrep"
 brew "eza"
@@ -46,14 +53,11 @@ brew "fzf"
 brew "fd"
 brew "tmux"
 brew "git"
-
-brew "libpq"
-brew "redis"
-
 brew "gh"
 
-brew "luarocks"
-brew "imagemagick"
+
+# brew "libpq"
+# brew "redis"
 
 
 # Node
@@ -65,23 +69,26 @@ brew "tflint"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/terraform-ls"
 
-brew "cmatrix"
 
-brew "zoxide"
 brew "stow"
 
+# 필수 설치 프로그램
+cask "kitty"
+cask "google-chrome"
 cask "slack"
 cask "1password"
-cask "arc"
-cask "google-chrome"
 cask "docker"
-cask "noiton"
 cask "figma"
+
+cask "notion"
+cask "arc"
 cask "devtoys"
-# cask "raycast"
+cask "raycast"
+cask "obsidian"
+
 # cask "blender"
 
-cask "obsidian"
-cask "font-jetbrains-meno-nerd-font"
+# Font
+cask "font-jetbrains-mono-nerd-font"
 cask "font-symbols-only-nerd-font"
 

@@ -1,8 +1,8 @@
 # GennYoon's dotfiles
 
-These are the dotfiles I use during development work. We will seek out new ways to improve our work and will continually update this repository. These are the settings I use, but I hope you find something useful here.
+제가 개발 작업 중에 사용하는 dotfiles 입니다. 작업을 개선할 수 있는 다양한 방법을 모색하고 있으며 지속적으로 저장소를 업데이트할 것입니다.
 
-# Requirements and tools that I use
+# 사용하는 도구
 
 - <a href="https://sw.kovidgoyal.net/kitty/" target="_blank">Kitty</a> - Terminal Emulator
 - <a href="https://github.com/eza-community/eza" target="_blank">Eza</a></a> - Modern replacement for `ls`
@@ -12,6 +12,8 @@ These are the dotfiles I use during development work. We will seek out new ways 
 - <a href="https://github.com/BurntSushi/ripgrep" target="_blank">ripgrep</a>
 - <a href="https://github.com/jesseduffield/lazygit" target="_blank">lazygit</a> - Easy Git GUI
 - <a href="https://github.com/dlvhdr/gh-dash" target="_blank">gh-dash</a> - Easy Git GUI
+
+### 사용법
 
 [ColorScheme List](https://vimcolorschemes.com/i/trending)
 
