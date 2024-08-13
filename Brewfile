@@ -3,6 +3,7 @@ tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "FelixKratz/formulae"
+tap "jesseduffield/lazygit"
 
 # Github Actions Test
 brew "act"
