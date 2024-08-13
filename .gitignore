@@ -4,14 +4,4 @@ Brewfile.lock.json
 
 **/neofetch/images/
 
-**/github-copilot/
 
-**/.config
-!**/.config/.jira/
-!**/.config/flutter/
-!**/.config/gh-dash/
-!**/.config/github-copilot/
-!**/.config/kitty/
-!**/.config/nvim/
-!**/.config/raycast/
-!**/.config/tmux/
