@@ -9,7 +9,18 @@ return {
   config = function()
     require("neo-tree").setup({
       window = {
-        width = 35,
+        width = 40,
+      },
+      filesystem = {
+        visible = false,
+        hide_dotfiles = true,
+        hide_gitignored = true,
+        hide_hidden = true,
+        filtered_items = {
+          always_show = { ".config" },
+          always_show_by_pattern = { ".env*" },
+          naver_show = { ".DS_Store" },
+        },
       },
     })
   end,
