@@ -47,6 +47,7 @@ brew "tree-sitter"
 # brew "gopls"
 # brew "go"
 
+brew "thefuck"
 brew "ripgrep"
 brew "eza"
 brew "ghq"
