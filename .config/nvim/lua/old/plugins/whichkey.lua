@@ -30,10 +30,11 @@ return {
       -- Find
       f = {
         name = "Find",
-        c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-        f = { "<cmd>Telescope find_files<cr>", "Find Files" },
-        r = { "<cmd>Telescope oldfiles<cr>", "Recent Files" },
-        g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
+        f = { "<cmd>Telescope find_files<cr>", "Fuzzy find files in cwd" },
+        r = { "<cmd>Telescope oldfiles<cr>", "Fuzzy find recent files" },
+        s = { "<cmd>Telescope live_grep<cr>", "Find string in cwd" },
+        c = { "<cmd>Telescope grep_string<cr>", "Find string under cursor in cwd" },
+        t = { "<cmd>TodoTelescope<cr>", "Find todos" },
       },
       -- Terminal
       t = {

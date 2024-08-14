@@ -30,16 +30,25 @@ config.macos_window_background_blur = 10
 config.keys = {
 	{ key = "LeftArrow", mods = "CMD", action = wezterm.action.SendString("^") },
 	{ key = "RightArrow", mods = "CMD", action = wezterm.action.SendString("$") },
-	{ key = ",", mods = "CMD", action = wezterm.action.SendString("\x14") },
+
+	{ key = ",", mods = "CMD", action = wezterm.action.SendString("\x14,") },
 	{ key = "t", mods = "CMD", action = wezterm.action.SendString("\x14c") },
-	{ key = "e", mods = "CMD", action = wezterm.action.SendString('\x14"') },
-	{ key = "e", mods = "CMD|SHIFT", action = wezterm.action.SendString("\x14%") },
+
+	{ key = "e", mods = "CMD", action = wezterm.action.SendString("\x14-") },
+	{ key = "E", mods = "CMD", action = wezterm.action.SendString("\x14|") },
+
 	{ key = "g", mods = "CMD", action = wezterm.action.SendString("\x14g") },
 	{ key = "G", mods = "CMD", action = wezterm.action.SendString("\x14G") },
 
-	{ key = "1", mods = "CMD", action = wezterm.action.SendString("\x141") },
-	{ key = "2", mods = "CMD", action = wezterm.action.SendString("\x142") },
-	{ key = "3", mods = "CMD", action = wezterm.action.SendString("\x143") },
+	{ key = "1", mods = "CMD", action = wezterm.action.SendString("\x140") },
+	{ key = "2", mods = "CMD", action = wezterm.action.SendString("\x141") },
+	{ key = "3", mods = "CMD", action = wezterm.action.SendString("\x142") },
+	{ key = "4", mods = "CMD", action = wezterm.action.SendString("\x143") },
+	{ key = "5", mods = "CMD", action = wezterm.action.SendString("\x144") },
+	{ key = "6", mods = "CMD", action = wezterm.action.SendString("\x145") },
+	{ key = "7", mods = "CMD", action = wezterm.action.SendString("\x146") },
+	{ key = "8", mods = "CMD", action = wezterm.action.SendString("\x147") },
+	{ key = "9", mods = "CMD", action = wezterm.action.SendString("\x148") },
 }
 
 return config

@@ -1,5 +1,8 @@
 export LANG=en_US.UTF-8
 
+# Brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -99,7 +102,7 @@ alias cd="z"
 export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 #
-# plugins=(git z)
+plugins=(git)
 #
 source $ZSH/oh-my-zsh.sh
 #
@@ -123,8 +126,6 @@ alias tf="terraform"
 # alias ta="tmux attach -t"
 # alias tk="tmux kill-session -t"
 #
-# Brew
-eval "$(/opt/homebrew/bin/brew shellenv)"
 #
 #
 # # brew를 통해 설치한 zsh의 plugin으로 자동완성과 명령어 하이라이트입니다.

@@ -56,11 +56,6 @@ brew "tmux"
 brew "git"
 brew "gh"
 
-
-# brew "libpq"
-# brew "redis"
-
-
 # Node
 brew "nvm"
 brew "pnpm"
@@ -75,7 +70,6 @@ brew "stow"
 
 # 필수 설치 프로그램
 cask "wezterm"
-cask "kitty"
 cask "google-chrome"
 cask "slack"
 cask "1password"
@@ -88,6 +82,7 @@ cask "devtoys"
 cask "raycast"
 cask "obsidian"
 
+# cask "kitty" # 폐기
 # cask "blender"
 
 # Font
