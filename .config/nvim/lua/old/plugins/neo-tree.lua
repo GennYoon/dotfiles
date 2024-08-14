@@ -8,7 +8,7 @@ return {
   config = function()
     require("neo-tree").setup({
       window = {
-        width = 40,
+        width = 30,
       },
       filesystem = {
         visible = false,

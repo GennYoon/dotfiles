@@ -40,15 +40,15 @@ config.keys = {
 	{ key = "g", mods = "CMD", action = wezterm.action.SendString("\x14g") },
 	{ key = "G", mods = "CMD", action = wezterm.action.SendString("\x14G") },
 
-	{ key = "1", mods = "CMD", action = wezterm.action.SendString("\x140") },
-	{ key = "2", mods = "CMD", action = wezterm.action.SendString("\x141") },
-	{ key = "3", mods = "CMD", action = wezterm.action.SendString("\x142") },
-	{ key = "4", mods = "CMD", action = wezterm.action.SendString("\x143") },
-	{ key = "5", mods = "CMD", action = wezterm.action.SendString("\x144") },
-	{ key = "6", mods = "CMD", action = wezterm.action.SendString("\x145") },
-	{ key = "7", mods = "CMD", action = wezterm.action.SendString("\x146") },
-	{ key = "8", mods = "CMD", action = wezterm.action.SendString("\x147") },
-	{ key = "9", mods = "CMD", action = wezterm.action.SendString("\x148") },
+	{ key = "1", mods = "CMD", action = wezterm.action.SendString("\x141") },
+	{ key = "2", mods = "CMD", action = wezterm.action.SendString("\x142") },
+	{ key = "3", mods = "CMD", action = wezterm.action.SendString("\x143") },
+	{ key = "4", mods = "CMD", action = wezterm.action.SendString("\x144") },
+	{ key = "5", mods = "CMD", action = wezterm.action.SendString("\x145") },
+	{ key = "6", mods = "CMD", action = wezterm.action.SendString("\x146") },
+	{ key = "7", mods = "CMD", action = wezterm.action.SendString("\x147") },
+	{ key = "8", mods = "CMD", action = wezterm.action.SendString("\x148") },
+	{ key = "9", mods = "CMD", action = wezterm.action.SendString("\x149") },
 }
 
 return config
