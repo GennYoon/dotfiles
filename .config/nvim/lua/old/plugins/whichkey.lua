@@ -5,45 +5,61 @@ return {
     vim.o.timeout = true
     vim.o.timeoutlen = 500
   end,
-  opts = {
-    plugins = { spelling = true },
-  },
-  config = function(_, setup)
+  config = function()
     local wk = require("which-key")
-    local opts = { mode = "n", prefix = "<leader>", buffer = nil, noremap = true, silent = true, nowait = true }
 
-    local mappings = {
-      ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-      ["e"] = { "<cmd>Neotree filesystem reveal toggle<CR>", "Explorer" },
-
-      -- Git
-      g = {
-        name = "Git",
+    wk.opts = {
+      plugins = {
+        spelling = true,
       },
-      -- Code
-      c = {
-        name = "Code",
-        a = { "<cmd>vim.lsp.buf.code_actions<cr>", "Code Action" },
-        r = { "<cmd>vim.lsp.buf.rename<cr>", "Code Rename" },
-        R = { "<cmd>vim.lsp.buf.references<cr>", "Code References" },
-      },
-      -- Find
-      f = {
-        name = "Find",
-        f = { "<cmd>Telescope find_files<cr>", "Fuzzy find files in cwd" },
-        r = { "<cmd>Telescope oldfiles<cr>", "Fuzzy find recent files" },
-        s = { "<cmd>Telescope live_grep<cr>", "Find string in cwd" },
-        c = { "<cmd>Telescope grep_string<cr>", "Find string under cursor in cwd" },
-        t = { "<cmd>TodoTelescope<cr>", "Find todos" },
-      },
-      -- Terminal
-      t = {
-        name = "Terminal",
-        t = { "<cmd>ToggleTerm direction=float<cr>", "Float Terminal" },
+      icons = {
+        mappings = false,
+        group = "",
       },
     }
 
-    wk.setup(setup)
-    wk.register(mappings, opts)
+    wk.add({
+      { "<leader>d", hidden = true },
+      { "<leader>D", hidden = true },
+      { "<leader>l", hidden = true },
+      { "<leader>w", hidden = true },
+      { "<leader>x", hidden = true },
+      { "<leader>a", "<cmd>Alpha<cr>", desc = "[A]lpha" },
+      { "<leader>e", "<cmd>Neotree filesystem reveal toggle<cr>", desc = "[E]xplorer" },
+
+      -- Git
+      { "<leader>g", group = "[G]it" },
+
+      -- Code
+      { "<leader>c", group = "[C]ode" },
+      { "<leader>ca", "<cmd>vim.lsp.buf.code_actions<cr>", desc = "Code [A]ction" },
+      { "<leader>cr", "<cmd>vim.lsp.buf.rename<cr>", desc = "Code [R]ename" },
+      { "<leader>cR", "<cmd>vim.lsp.buf.references<cr>", desc = "Code [R]eferences" },
+
+      -- Find
+      { "<leader>f", group = "[F]ind" },
+      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find [F]ile in cmd" },
+      { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Find [R]ecent in cmd" },
+      { "<leader>fs", "<cmd>Telescope live_grep<cr>", desc = "Find [S]tring in cmd" },
+      { "<leader>fc", "<cmd>Telescope grep_string<cr>", desc = "Find [S]tring in cmd" },
+      { "<leader>ft", "<cmd>TodoTelescope<cr>", desc = "Find [T]odos" },
+
+      -- Terminal
+      { "<leader>t", group = "[T]erminal" },
+      { "<leader>tl", hidden = true },
+      { "<leader>tt", "<cmd>ToggleTerm direction=float<cr>", desc = "Float [T]erminal" },
+
+      -- Session
+      { "<leader>s", group = "[S]ession" },
+      { "<leader>sr", "<cmd>SessionRestore<cr>", desc = "Session [R]estore for cwd" },
+      { "<leader>ss", "<cmd>SessionSave<cr>", desc = "Session [S]ave for auto session root dir" },
+
+      -- Yanky
+      { "<leader>y", group = "[Y]ank" },
+      { "<leader>yy", "<cmd>YankyRingHistory<cr>", desc = "Open Yank History" },
+      { "<leader>yc", "<cmd>YankyClearHistory<cr>", desc = "Clear Yark History" },
+    })
+
+    wk.setup(wk.opts)
   end,
 }
