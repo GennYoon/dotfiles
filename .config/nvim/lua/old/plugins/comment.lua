@@ -1,3 +1,5 @@
+-- 주석
+
 return {
   "numToStr/Comment.nvim",
   event = { "BufReadPre", "BufNewFile" },

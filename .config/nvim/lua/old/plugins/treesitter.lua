@@ -1,59 +1,50 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  depends = { "windwp/nvim-ts-autotag" },
-  version = false,
+  event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
-  event = { "VeryLazy" },
-  lazy = vim.fn.argc(-1) == 0,
-  init = function(plugin)
-    require("lazy.core.loader").add_to_rtp(plugin)
-    require("nvim-treesitter.query_predicates")
-  end,
-  cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
-  keys = {
-    { "<c-space>", desc = "Increment Selection" },
-    { "<bs>", desc = "Decrement Selection", mode = "x" },
+  dependencies = {
+    "windwp/nvim-ts-autotag",
   },
-  opts_extend = { "ensure_installed" },
-
   config = function()
-    local config = require("nvim-treesitter.configs")
+    -- ts-autotag를 설정합니다.
+    require("nvim-ts-autotag").setup({})
 
-    config.setup({
-      highlight = { enable = true },
+    -- import nvim-treesitter plugin
+    local treesitter = require("nvim-treesitter.configs")
+
+    -- configure treesitter
+    treesitter.setup({ -- enable syntax highlighting
+      highlight = {
+        enable = true,
+      },
+      -- enable indentation
       indent = { enable = true },
-      autotag = { enable = true },
+      -- enable autotagging (w/ nvim-ts-autotag plugin)
+      autotag = {
+        enable = true,
+      },
+      -- ensure these language parsers are installed
       ensure_installed = {
-        "bash",
-        "c",
-        "diff",
+        "json",
+        "javascript",
+        "typescript",
+        "tsx",
+        "yaml",
         "html",
         "css",
-        "dockerfile",
-        "gitignore",
-        "javascript",
-        "jsdoc",
-        "json",
-        "jsonc",
-        "lua",
-        "luadoc",
-        "luap",
+        "prisma",
         "markdown",
         "markdown_inline",
-        "printf",
-        "python",
-        "prisma",
-        "query",
-        "regex",
-        "toml",
-        "tsx",
-        "typescript",
-        "terraform",
-        "hcl",
+        "svelte",
+        "graphql",
+        "bash",
+        "lua",
         "vim",
+        "dockerfile",
+        "gitignore",
+        "query",
         "vimdoc",
-        "xml",
-        "yaml",
+        "c",
       },
       incremental_selection = {
         enable = true,
