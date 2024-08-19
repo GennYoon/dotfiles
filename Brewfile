@@ -4,6 +4,13 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "FelixKratz/formulae"
 tap "jesseduffield/lazygit"
+tap "ankitpokhrel/jira-cli"
+
+# repo = "dandavison/open-in-editor"
+# tap repo, "https://github.com/#{repo}.git"
+# cask "open-in-editor"
+# brew "duti"
+# cask "platypus"
 
 # Brew CLI
 brew "jira-cli"
@@ -15,7 +22,6 @@ brew "awscli"
 brew "act"
 
 # Jira
-tap "ankitpokhrel/jira-cli"
 
 # Brew Default
 brew "cask"
