@@ -1,25 +1,27 @@
-# Brewfile
+# Brew Tap
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "FelixKratz/formulae"
 tap "jesseduffield/lazygit"
 
+# Brew CLI
+brew "jira-cli"
+brew "vercel-cli"
+brew "awscli"
+
+
 # Github Actions Test
 brew "act"
 
 # Jira
 tap "ankitpokhrel/jira-cli"
-brew "jira-cli"
 
-# Brew
+# Brew Default
+brew "cask"
 brew "wget"
 brew "arl/arl/gitmux"
 brew "gum"
-brew "cask"
-
-# AWS
-brew "awscli"
 
 # Supabase
 brew "supabase/tap/supabase"
@@ -30,9 +32,6 @@ brew "rbenv"
 brew "watchman"
 brew "ios-deploy"
 brew "cocoapods"
-cask "zulu@17"
-cask "flutter"
-cask "android-studio"
 
 # Neovim
 brew "starship"
@@ -76,7 +75,9 @@ cask "slack"
 cask "1password"
 cask "docker"
 cask "figma"
-
+cask "zulu@17"
+cask "flutter"
+cask "android-studio"
 cask "notion"
 cask "arc"
 cask "devtoys"
