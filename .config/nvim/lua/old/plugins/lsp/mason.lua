@@ -44,7 +44,7 @@ return {
         "mdx_analyzer", -- MDX
         "dockerls",
         "docker_compose_language_service",
-        -- "denols", -- Deno
+        "denols", -- Deno
         -- "svelte",
       },
     })

@@ -6,6 +6,9 @@ tap "FelixKratz/formulae"
 tap "jesseduffield/lazygit"
 tap "ankitpokhrel/jira-cli"
 
+tap "dart-lang/dart"
+brew "dart"
+
 # repo = "dandavison/open-in-editor"
 # tap repo, "https://github.com/#{repo}.git"
 # cask "open-in-editor"

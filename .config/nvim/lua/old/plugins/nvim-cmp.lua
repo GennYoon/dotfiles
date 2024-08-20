@@ -30,7 +30,7 @@ return {
 
       cmp.setup({
         completion = {
-          completeopt = "menu,menuone,noinsert",
+          completeopt = "menu,menuone,preview,noinsert",
         },
         snippet = { -- configure how nvim-cmp interacts with snippet engine
           expand = function(args)

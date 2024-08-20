@@ -77,15 +77,6 @@ return {
       end,
       ["tsserver"] = function()
         lspconfig["tsserver"].setup({
-          -- on_attach = function(client, bufnr)
-          --   on_attach(client, bufnr)
-          --   vim.keymap.set("n", "<leader>ro", function()
-          --     vim.lsp.buf.execute_command({
-          --       command = "_typescript.organizeImports",
-          --       arguments = { vim.fn.expand("%:p") },
-          --     })
-          --   end, { buffer = bufnr, remap = false })
-          -- end,
           root_dir = function(filename, bufnr)
             local denoRootDir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")(filename)
             if denoRootDir then
