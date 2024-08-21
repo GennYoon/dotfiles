@@ -2,13 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
-  dependencies = {
-    "windwp/nvim-ts-autotag",
-  },
   config = function()
-    -- ts-autotag를 설정합니다.
-    require("nvim-ts-autotag").setup({})
-
     -- import nvim-treesitter plugin
     local treesitter = require("nvim-treesitter.configs")
 
@@ -21,7 +15,7 @@ return {
       indent = { enable = true },
       -- enable autotagging (w/ nvim-ts-autotag plugin)
       autotag = {
-        enable = true,
+        enable = false,
       },
       -- ensure these language parsers are installed
       ensure_installed = {

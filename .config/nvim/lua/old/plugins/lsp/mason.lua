@@ -28,7 +28,6 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         "tsserver", -- Typescript
-        "gopls", -- Go
         "html", -- HTML
         "cssls", -- CSS
         "terraformls", -- Terraform
@@ -39,6 +38,7 @@ return {
         "emmet_ls",
         "prismals",
         "pyright",
+        -- "gopls", -- Go
         "taplo", -- TOML
         "yamlls", -- YAML
         "mdx_analyzer", -- MDX
