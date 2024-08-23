@@ -42,7 +42,11 @@ return {
       { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Find [R]ecent in cmd" },
       { "<leader>fs", "<cmd>Telescope live_grep<cr>", desc = "Find [S]tring in cmd" },
       { "<leader>fc", "<cmd>Telescope grep_string<cr>", desc = "Find [S]tring in cmd" },
-      { "<leader>ft", "<cmd>TodoTelescope<cr>", desc = "Find [T]odos" },
+      {
+        "<leader>ft",
+        "<cmd>TodoTelescope keywords=TODO,FIX,FIXME,BUG,FIXIT,ISSUE,TODO,HACK,WARN,WARNING,PERF,OPTIM,PERFORMANCE,OPTIMAZE,TEST,TESTING,PASSED,FAILED<cr>",
+        desc = "Find [T]odos",
+      },
 
       -- Terminal
       { "<leader>t", group = "[T]erminal" },
@@ -58,6 +62,10 @@ return {
       { "<leader>y", group = "[Y]ank" },
       { "<leader>yy", "<cmd>YankyRingHistory<cr>", desc = "Open Yank History" },
       { "<leader>yc", "<cmd>YankyClearHistory<cr>", desc = "Clear Yark History" },
+
+      -- Quick
+      { ";", group = "Quick" },
+      { ";t", "<cmd>Telescope TodoTelescope keywords=TODO<cr>", desc = "[T]odo Comment" },
     })
 
     wk.setup(wk.opts)
