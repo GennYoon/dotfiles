@@ -9,6 +9,9 @@ tap "ankitpokhrel/jira-cli"
 tap "dart-lang/dart"
 brew "dart"
 
+tap "CQLabs/dcm"
+brew "dcm"
+
 # repo = "dandavison/open-in-editor"
 # tap repo, "https://github.com/#{repo}.git"
 # cask "open-in-editor"

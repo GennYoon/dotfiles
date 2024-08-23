@@ -13,7 +13,7 @@ return {
         javascriptreact = { { "prettierd", "prettier" } },
         typescriptreact = { { "prettierd", "prettier" } },
         svelte = { { "prettierd", "prettier" } },
-        dart = { "ddart_format" },
+        dart = { "dart_format" },
         rust = { "rustfmt" },
         java = { "google-java-format" },
         kotlin = { "ktlint" },

@@ -3,11 +3,13 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
+    { "j-hui/fidget.nvim", tag = "legacy" },
+    "RobertBrunhage/dart-tools.nvim",
     { "antosha417/nvim-lsp-file-operations", config = true },
   },
   config = function()
     local lspconfig = require("lspconfig")
-    local mason_lspconfig = require("mason-lspconfig")
+    -- local mason_lspconfig = require("mason-lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local keymap = vim.keymap
 
@@ -68,88 +70,131 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    mason_lspconfig.setup_handlers({
-      -- default handler for installed servers
-      function(server_name)
-        lspconfig[server_name].setup({
-          capabilities = capabilities,
-        })
-      end,
-      ["tsserver"] = function()
-        lspconfig["tsserver"].setup({
-          root_dir = function(filename, bufnr)
-            local denoRootDir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")(filename)
-            if denoRootDir then
-              -- print('this seems to be a deno project; returning nil so that tsserver does not attach');
-              return nil
-              -- else
-              -- print('this seems to be a ts project; return root dir based on package.json')
-            end
-
-            return lspconfig.util.root_pattern("package.json")(filename)
-          end,
-          single_file_support = false,
-        })
-      end,
-      ["denols"] = function()
-        lspconfig["denols"].setup({
-          root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-          init_options = {
-            lint = true,
-            unstable = true,
-            suggest = {
-              imports = {
-                hosts = {
-                  ["https://deno.land"] = true,
-                  ["https://cdn.nest.land"] = true,
-                  ["https://crux.land"] = true,
-                },
-              },
-            },
-          },
-        })
-      end,
-      ["cssls"] = function()
-        lspconfig["cssls"].setup({
-          capabilities = capabilities,
-          settings = {
-            css = { validate = true, lint = { unknownAtRules = "ignore" } },
-            scss = { validate = true, lint = { unknownAtRules = "ignore" } },
-            less = { validate = true, lint = { unknownAtRules = "ignore" } },
-          },
-        })
-      end,
-      ["graphql"] = function()
-        -- configure graphql language server
-        lspconfig["graphql"].setup({
-          capabilities = capabilities,
-          filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-        })
-      end,
-      ["emmet_ls"] = function()
-        -- configure emmet language server
-        lspconfig["emmet_ls"].setup({
-          capabilities = capabilities,
-          filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
-        })
-      end,
-      ["lua_ls"] = function()
-        -- configure lua server (with special settings)
-        lspconfig["lua_ls"].setup({
-          capabilities = capabilities,
-          settings = {
-            Lua = {
-              -- make the language server recognize "vim" global
-              diagnostics = {
-                globals = { "vim" },
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-            },
-          },
-        })
-      end,
+    vim.diagnostic.config({
+      virtual_text = true,
+      signs = false,
     })
+
+    local dartExcludedFolders = {
+      vim.fn.expand("$HOME/AppData/Local/Pub/Cache"),
+      vim.fn.expand("$HOME/.pub-cache"),
+      vim.fn.expand("/opt/homebrew/"),
+      vim.fn.expand("$HOME/tools/flutter/"),
+    }
+
+    lspconfig.tsserver.setup({
+      -- denols와의 충돌방지로 다음을 설정합니다.
+      -- root에 deno.json, deno,jsonc 파일이 존재하면 deno로 인식합니다.
+      root_dir = function(filename, bufnr)
+        local denoRootDir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")(filename)
+        if denoRootDir then
+          return nil
+        end
+
+        return lspconfig.util.root_pattern("package.json")(filename)
+      end,
+      single_file_support = false,
+    })
+
+    lspconfig.dartls.setup({
+      capabilities = capabilities,
+      cmd = { "dart", "language-server", "--protocol=lsp" },
+      filetypes = { "dart" },
+      init_options = {
+        onlyAnalyzeProjectsWithOpenFiles = false,
+        suggestFromUnimportedLibraries = true,
+        closingLabels = true,
+        outline = false,
+        flutterOutline = false,
+      },
+      settings = {
+        dart = {
+          analysisExcludedFolders = dartExcludedFolders,
+          updateImportsOnRename = true,
+          completeFunctionCalls = true,
+          showTodos = true,
+        },
+      },
+    })
+
+    lspconfig.dcmls.setup({
+      capabilities = capabilities,
+      cmd = { "dcm", "start-server", "--client=neovim" },
+      filetypes = { "dart", "yaml" },
+      settings = {
+        dart = {
+          analysisExcludedFolders = dartExcludedFolders,
+        },
+      },
+    })
+
+    lspconfig.denols.setup({
+      -- tsserver와의 충돌방지로 다음을 설정합니다.
+      -- root에 deno.json, deno,jsonc 파일이 존재하면 deno로 인식합니다.
+      root_dir = function(filename, bufnr)
+        local tsserverRootDir = lspconfig.util.root_pattern("package.json")(filename)
+        if tsserverRootDir then
+          return nil
+        end
+
+        return lspconfig.util.root_pattern("deno.json", "deno.jsonc")(filename)
+      end,
+      init_options = {
+        lint = true,
+        unstable = true,
+        suggest = {
+          imports = {
+            hosts = {
+              ["https://deno.land"] = true,
+              ["https://cdn.nest.land"] = true,
+              ["https://crux.land"] = true,
+            },
+          },
+        },
+      },
+    })
+
+    lspconfig.tailwindcss.setup({
+      capabilities = capabilities,
+      settings = {
+        -- NOTE: tailwindcss 문법 오류를 방지합니다.
+        css = { validate = true, lint = { unknownAtRules = "ignore" } },
+        scss = { validate = true, lint = { unknownAtRules = "ignore" } },
+        less = { validate = true, lint = { unknownAtRules = "ignore" } },
+      },
+    })
+
+    lspconfig.graphql.setup({
+      capabilities = capabilities,
+      filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+    })
+
+    -- configure emmet language server
+    lspconfig.emmet_ls.setup({
+      capabilities = capabilities,
+      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+    })
+
+    -- configure lua server (with special settings)
+    lspconfig.lua_ls.setup({
+      capabilities = capabilities,
+      settings = {
+        Lua = {
+          -- make the language server recognize "vim" global
+          diagnostics = {
+            globals = { "vim" },
+          },
+          completion = {
+            callSnippet = "Replace",
+          },
+        },
+      },
+    })
+
+    -- Tooltip for the lsp in bottom right
+    -- require("fidget").setup({})
+
+    -- Hot reload :)
+    require("dart-tools")
   end,
 }

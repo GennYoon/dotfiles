@@ -28,12 +28,12 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         "tsserver", -- Typescript
+        "tailwindcss", -- Tailwindcss
+        "lua_ls",
         "html", -- HTML
         "cssls", -- CSS
         "terraformls", -- Terraform
-        "tailwindcss", -- Tailwindcss
         "jsonls", -- JSON
-        "lua_ls",
         "graphql",
         "emmet_ls",
         "prismals",

@@ -65,7 +65,15 @@ return {
 
       -- Quick
       { ";", group = "Quick" },
-      { ";t", "<cmd>Telescope TodoTelescope keywords=TODO<cr>", desc = "[T]odo Comment" },
+      { ";t", "<cmd>TodoLocList keywords=TODO<cr>", desc = "[T]odo Comment" },
+      { ";d", "<cmd>lua require('undotree').toggle()<cr>", desc = "Un[D]o Tree Toggle" },
+      { ";m", "<cmd>MarkdownPreviewToggle<cr>", desc = "[M]arkdown Preview Toggle" },
+
+      { ";f", group = "[F]lutter" },
+      { ";fs", "<cmd>FlutterRun<cr>", desc = "Flutter [S]tart" },
+      { ";fr", "<cmd>FlutterReload<cr>", desc = "Flutter [R]eload" },
+      { ";fd", "<cmd>FlutterDevices<cr>", desc = "Flutter [D]evices" },
+      { ";fo", "<cmd>FlutterOutlineToggle<cr>", desc = "Flutter [O]utline Toggle" },
     })
 
     wk.setup(wk.opts)
