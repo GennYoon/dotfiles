@@ -74,13 +74,15 @@ keymap.set("v", "<", "<gv", opts)
 keymap.set("v", ">", ">gv", opts)
 
 -- Move text up and down (Complete)
-keymap.set("v", "<M-Up>", ":m .-2<CR>==", opts)
-keymap.set("v", "<M-Down>", ":m .+1<CR>==", opts)
+keymap.set("v", "<M-Up>", ":m .-2<CR>gv=gv", opts)
+keymap.set("v", "<M-Down>", ":m .+1<CR>gv=gv", opts)
 
 -- Visual Block --
 -- Move text up and down
-keymap.set("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap.set("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap.set("x", "J", ":m '>+1<CR>gv=gv", opts)
+keymap.set("x", "K", ":m '<-2<CR>gv=gv", opts)
+
+keymap.set("x", "p", "pgvy")
 
 -- -- Navigate vim panes better
 -- vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")

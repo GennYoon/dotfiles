@@ -74,6 +74,8 @@ return {
       { ";fr", "<cmd>FlutterReload<cr>", desc = "Flutter [R]eload" },
       { ";fd", "<cmd>FlutterDevices<cr>", desc = "Flutter [D]evices" },
       { ";fo", "<cmd>FlutterOutlineToggle<cr>", desc = "Flutter [O]utline Toggle" },
+
+      { ";ss", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", desc = "Replace All" },
     })
 
     wk.setup(wk.opts)
