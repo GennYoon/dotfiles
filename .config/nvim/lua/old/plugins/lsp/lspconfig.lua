@@ -98,26 +98,26 @@ return {
         end,
         single_file_support = false,
       }),
-      lspconfig.dartls.setup({
-        capabilities = capabilities,
-        cmd = { "dart", "language-server", "--protocol=lsp" },
-        filetypes = { "dart" },
-        init_options = {
-          onlyAnalyzeProjectsWithOpenFiles = false,
-          suggestFromUnimportedLibraries = true,
-          closingLabels = true,
-          outline = false,
-          flutterOutline = false,
-        },
-        settings = {
-          dart = {
-            analysisExcludedFolders = dartExcludedFolders,
-            updateImportsOnRename = true,
-            completeFunctionCalls = true,
-            showTodos = true,
-          },
-        },
-      }),
+      -- lspconfig.dartls.setup({
+      --   capabilities = capabilities,
+      --   cmd = { "dart", "language-server", "--protocol=lsp" },
+      --   filetypes = { "dart" },
+      --   init_options = {
+      --     onlyAnalyzeProjectsWithOpenFiles = false,
+      --     suggestFromUnimportedLibraries = true,
+      --     closingLabels = true,
+      --     outline = false,
+      --     flutterOutline = false,
+      --   },
+      --   settings = {
+      --     dart = {
+      --       analysisExcludedFolders = dartExcludedFolders,
+      --       updateImportsOnRename = true,
+      --       completeFunctionCalls = true,
+      --       showTodos = true,
+      --     },
+      --   },
+      -- }),
       lspconfig.dcmls.setup({
         capabilities = capabilities,
         cmd = { "dcm", "start-server", "--client=neovim" },
@@ -164,6 +164,18 @@ return {
           css = { validate = true, lint = { unknownAtRules = "ignore" } },
           scss = { validate = true, lint = { unknownAtRules = "ignore" } },
           less = { validate = true, lint = { unknownAtRules = "ignore" } },
+        },
+      }),
+
+      lspconfig.prismals.setup({
+        capabilities = capabilities,
+        cmd = { "prisma-language-server", "--stdio" },
+        filetypes = { "prisma" },
+        root_dir = lspconfig.util.root_pattern(".igt", "package.json"),
+        settings = {
+          prisma = {
+            prismaFmtBinPath = vim.fn.exepath("prisma-fmt"),
+          },
         },
       }),
 

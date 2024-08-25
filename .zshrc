@@ -157,3 +157,11 @@ eval "$(starship init zsh)"
 # add-zsh-hook chpwd load-nvmrc
 # load-nvmrc
 
+
+# pnpm
+export PNPM_HOME="/Users/gennyoon/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
