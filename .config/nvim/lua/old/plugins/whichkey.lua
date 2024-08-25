@@ -35,6 +35,7 @@ return {
       { "<leader>ca", "<cmd>vim.lsp.buf.code_actions<cr>", desc = "Code [A]ction" },
       { "<leader>cr", "<cmd>vim.lsp.buf.rename<cr>", desc = "Code [R]ename" },
       { "<leader>cR", "<cmd>vim.lsp.buf.references<cr>", desc = "Code [R]eferences" },
+      { "<leader>cp", "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown [P]review" },
 
       -- Find
       { "<leader>f", group = "[F]ind" },

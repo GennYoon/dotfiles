@@ -1,25 +1,29 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
+  event = { "BufReadPre", "BufNewFile" },
+  lazy = vim.fn.argc(-1) == 0,
+  cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
   config = function()
     -- import nvim-treesitter plugin
     local treesitter = require("nvim-treesitter.configs")
 
     -- configure treesitter
-    treesitter.setup({ -- enable syntax highlighting
-      highlight = {
-        enable = true,
-      },
+    treesitter.setup({
+      -- enable syntax highlighting
+      highlight = { enable = true },
       -- enable indentation
       indent = { enable = true },
       -- enable autotagging (w/ nvim-ts-autotag plugin)
-      autotag = {
-        enable = false,
-      },
+      autotag = { enable = false },
       -- ensure these language parsers are installed
       ensure_installed = {
-        "json",
+        "git_config", -- git
+        "gitcommit", -- git
+        "git_rebase", -- git
+        "gitignore", -- git
+        "gitattributes", -- git
+        "json5", -- json
         "javascript",
         "typescript",
         "tsx",
@@ -27,15 +31,14 @@ return {
         "html",
         "css",
         "prisma",
-        "markdown",
-        "markdown_inline",
-        "svelte",
+        "svelte", -- svelte
+        "terraform", -- terraform
+        "hcl", -- terraform
         "graphql",
         "bash",
         "lua",
         "vim",
         "dockerfile",
-        "gitignore",
         "query",
         "vimdoc",
         "c",

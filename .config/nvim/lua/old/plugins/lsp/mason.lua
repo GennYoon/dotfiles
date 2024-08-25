@@ -32,12 +32,14 @@ return {
         "lua_ls",
         "html", -- HTML
         "cssls", -- CSS
-        "terraformls", -- Terraform
         "jsonls", -- JSON
+        "markdownlint-cli2", -- Markdown
+        "markdown-toc", -- Markdown
         "graphql",
         "emmet_ls",
         "prismals",
         "pyright",
+        "tflint", -- terraform
         -- "gopls", -- Go
         "taplo", -- TOML
         "yamlls", -- YAML
