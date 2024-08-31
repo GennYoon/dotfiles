@@ -33,8 +33,6 @@ return {
         "html", -- HTML
         "cssls", -- CSS
         "jsonls", -- JSON
-        "markdownlint-cli2", -- Markdown
-        "markdown-toc", -- Markdown
         "graphql",
         "emmet_ls",
         "prismals",
