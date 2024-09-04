@@ -28,6 +28,8 @@ config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.75
 config.macos_window_background_blur = 10
 
+config.enable_scroll_bar = false
+
 config.keys = {
 	{ key = "LeftArrow", mods = "CMD", action = wezterm.action.SendString("^") },
 	{ key = "RightArrow", mods = "CMD", action = wezterm.action.SendString("$") },
