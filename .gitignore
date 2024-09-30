@@ -56,18 +56,10 @@ DerivedData
 # CocoaPods
 Pods/
 
-# Atom.io
-.atom/packages/save-session
-.atom/compile-cache
-.atom/storage
-
-# Fish local config
-.config/fish/config-local.fish
-.config/fish/fish_variables.x86_64
-
-# Karabiner
-.config/karabiner/automatic_backups
-
 # Brew
 Brewfile.lock.json
-**/github-copilot/hosts.json
+
+# The Fuck
+.config/**
+!.config/nvim
+!.config/tmux
