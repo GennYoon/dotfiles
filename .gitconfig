@@ -1,41 +1,39 @@
-[core]
-  editor = nvim
-
-[interactive]
-  diffFilter = delta --color-only
-
-[delta]
-  pager = delta
-  features = side-by-side line-numbers decorations
-  navigate = true    # use n and N to move between diff sections
-  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
-  plus-style = syntax "#003800"
-  minus-style = syntax "#3f0001"
-
-[delta "decorations"]
-  commit-decoration-style = bold yellow box ul
-    file-style = bold yellow ul
-    file-decoration-style = none
-    hunk-header-decoration-style = cyan box ul
-
-[delta "line-numbers"]
-    line-numbers-left-style = cyan
-    line-numbers-right-style = cyan
-    line-numbers-minus-style = 124
-    line-numbers-plus-style = 28
-
-[merge]
-  conflictstyle = diff3
-
-[diff]
-  colorMoved = default
-
-
 [init]
 	defaultBranch = main
-
+[core]
+  excludesfile = ~/.gitignore
+  editor = nvim
+  ignorecase = false
 [user]
 	email = yoonwonyoul@webchemist.net
 	name = GennYoon
 [pull]
 	rebase = true
+[push]
+  default = simple
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+  ui = auto
+[hub]
+  protocol = https
+[github]
+  user = GennYoon
+[diff]
+  tool = nvimdiff
+[difftool "nvimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE
+  path =
+[mergetool "nvimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE -ancestor $BASE -merge $MERGED
+	trustExitCode = true
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[ghq]
+  root = ~/.ghq

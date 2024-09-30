@@ -1,5 +1,10 @@
--- require("webchemist.core")
--- require("webchemist.lazy")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+if vim.loader then
+  vim.loader.enable()
+end
 
-require("old.core")
-require("old.lazy")
+_G.dd = function(...)
+  require("util.debug").dump(...)
+end
+
+require("config.lazy")
