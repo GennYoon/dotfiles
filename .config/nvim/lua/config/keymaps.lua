@@ -1,8 +1,34 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+
+-- Modes
+-- normal_mode = "n",
+-- insert_mode = "i",
+-- visual_mode = "v",
+-- visual_block_mode = "x",
+-- term_mode = "t",
+-- command_mode = "c",
+
+-- Meta Key
+-- S <shift>
+-- C <control>
+-- M <option>
+-- D <command>
+
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
+
+keymap.del("n", "<leader>E", nil)
+keymap.del("n", "<leader>l", nil)
+keymap.del("n", "<leader>K", nil)
+keymap.del("n", "<leader>z", nil)
+keymap.del("n", "<leader>|", nil)
+keymap.del("n", "<leader>-", nil)
+keymap.del("n", "<Leader><space>", nil)
+keymap.del("n", "<leader>`", nil)
+keymap.del("n", "<leader>/", nil)
+keymap.del("n", "<leader>?", nil)
 
 -- Do things without affecting the registers
 keymap.set("n", "x", '"_x')
@@ -38,6 +64,14 @@ keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
 -- Jumplist
 keymap.set("n", "<C-m>", "<C-i>", opts)
 
+-- Navigate buffers
+keymap.set("n", "<S-l>", ":bnext<CR>", opts)
+keymap.set("n", "<S-h>", ":bprevious<CR>", opts)
+
+-- Move text up and down
+keymap.set("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap.set("n", "<A-k>", ":m .-2<CR>==", opts)
+
 -- New tab
 keymap.set("n", "te", ":tabedit")
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
@@ -70,3 +104,20 @@ end)
 keymap.set("n", "<leader>i", function()
   require("webchemist.lsp").toggleInlayHints()
 end)
+
+-- Visual --
+-- Stay in indent mode
+keymap.set("v", "<", "<gv^", opts)
+keymap.set("v", ">", ">gv^", opts)
+
+-- Move text up and down
+keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+keymap.set("v", "p", '"_dP', opts)
+
+-- Visual Block --
+-- Move text up and down
+keymap.set("x", "J", ":m '>+1<CR>gv=gv", opts)
+keymap.set("x", "K", ":m '<-2<CR>gv=gv", opts)
+keymap.set("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+keymap.set("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)

@@ -61,5 +61,5 @@ Brewfile.lock.json
 
 # The Fuck
 .config/**
-!.config/nvim
-!.config/tmux
+!.config/nvim/**
+!.config/tmux/**
