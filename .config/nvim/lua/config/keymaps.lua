@@ -22,7 +22,6 @@ local opts = { noremap = true, silent = true }
 keymap.del("n", "<leader>E", nil)
 keymap.del("n", "<leader>l", nil)
 keymap.del("n", "<leader>K", nil)
-keymap.del("n", "<leader>z", nil)
 keymap.del("n", "<leader>|", nil)
 keymap.del("n", "<leader>-", nil)
 keymap.del("n", "<Leader><space>", nil)

@@ -59,7 +59,5 @@ Pods/
 # Brew
 Brewfile.lock.json
 
-# The Fuck
-.config/**
-!.config/nvim/**
-!.config/tmux/**
+# Copilot
+.config/github-copilot/hosts.json

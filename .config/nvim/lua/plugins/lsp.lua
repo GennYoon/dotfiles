@@ -12,10 +12,11 @@ return {
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
+        "markdownlint-cli2",
+        "markdown-toc",
       })
     end,
   },
-
   -- lsp servers
   {
     "neovim/nvim-lspconfig",

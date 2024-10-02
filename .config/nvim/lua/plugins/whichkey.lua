@@ -100,7 +100,7 @@ return {
       { "<leader>tl", hidden = true },
       -- { "<leader>tn", "<cmd>lua _NODE_TOGGLE()<cr>", desc = "Node" },
       -- { "<leader>tu", "<cmd>lua _NCDU_TOGGLE()<cr>", desc = "NCDU" },
-      { "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", desc = "[F]loat Terminal" },
+      { "<leader>tt", "<cmd>ToggleTerm direction=float<cr>", desc = "[F]loat Terminal" },
       { "<leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "[H]orizontal Terminal" },
       { "<leader>tv", "<cmd>ToggleTerm size=50 direction=vertical<cr>", desc = "[V]ertical Terminal" },
 
@@ -115,18 +115,80 @@ return {
       { "<leader>yc", "<cmd>YankyClearHistory<cr>", desc = "Clear Yark History" },
 
       -- Quick
-      { ";", group = "Quick" },
+      -- { ";", group = "Quick" },
       { ";t", "<cmd>TodoLocList keywords=TODO<cr>", desc = "[T]odo Comment" },
-      { ";d", "<cmd>lua require('undotree').toggle()<cr>", desc = "Un[D]o Tree Toggle" },
       { ";m", "<cmd>MarkdownPreviewToggle<cr>", desc = "[M]arkdown Preview Toggle" },
+      --
+      -- { ";f", group = "[F]lutter" },
+      -- { ";fs", "<cmd>FlutterRun<cr>", desc = "Flutter [S]tart" },
+      -- { ";fr", "<cmd>FlutterReload<cr>", desc = "Flutter [R]eload" },
+      -- { ";fd", "<cmd>FlutterDevices<cr>", desc = "Flutter [D]evices" },
+      -- { ";fo", "<cmd>FlutterOutlineToggle<cr>", desc = "Flutter [O]utline Toggle" },
 
-      { ";f", group = "[F]lutter" },
-      { ";fs", "<cmd>FlutterRun<cr>", desc = "Flutter [S]tart" },
-      { ";fr", "<cmd>FlutterReload<cr>", desc = "Flutter [R]eload" },
-      { ";fd", "<cmd>FlutterDevices<cr>", desc = "Flutter [D]evices" },
-      { ";fo", "<cmd>FlutterOutlineToggle<cr>", desc = "Flutter [O]utline Toggle" },
+      {
+        "<leader>fP",
+        function()
+          require("telescope.builtin").find_files({
+            cwd = require("lazy.core.config").options.root,
+          })
+        end,
+        desc = "Find Plugin File",
+      },
 
-      { ";ss", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", desc = "Replace All" },
+      {
+        ";f",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.find_files({
+            no_ignore = false,
+            hidden = true,
+          })
+        end,
+        desc = "Lists files in your current working directory, respects .gitignore",
+      },
+
+      {
+        ";s",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.live_grep({
+            additional_args = { "--hidden" },
+          })
+        end,
+        desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
+      },
+
+      {
+        "\\\\",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.buffers()
+        end,
+        desc = "Lists open buffers",
+      },
+
+      {
+        "sf",
+        function()
+          local telescope = require("telescope")
+
+          local function telescope_buffer_dir()
+            return vim.fn.expand("%:p:h")
+          end
+
+          telescope.extensions.file_browser.file_browser({
+            path = "%:p:h",
+            cwd = telescope_buffer_dir(),
+            respect_gitignore = false,
+            hidden = true,
+            grouped = true,
+            previewer = false,
+            initial_mode = "normal",
+            layout_config = { height = 40 },
+          })
+        end,
+        desc = "Open File Browser with the path of the current buffer",
+      },
     }
 
     wk.setup(setup)
