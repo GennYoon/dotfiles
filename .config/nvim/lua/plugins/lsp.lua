@@ -19,19 +19,52 @@ return {
   -- lsp servers
   {
     "neovim/nvim-lspconfig",
+    event = { "BufReadPre", "BufNewFile" },
     opts = {
       inlay_hints = { enabled = false },
       ---@type lspconfig.options
       servers = {
-        cssls = {},
-        tailwindcss = {
-          root_dir = function(...)
-            return require("lspconfig.util").root_pattern(".git")(...)
+        cssls = {
+          -- NOTE: tailwindcss 문법 오류를 방지합니다.
+          settings = { css = { lint = { unknownAtRules = "ignore" } } },
+        },
+        prismals = {
+          filetypes = { "prisma" },
+        },
+        vtsls = {
+          filetypes = { "vue" },
+        },
+        denols = {
+          root_dir = function(filename)
+            local is_deno = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")
+            if not is_deno then
+              return nil
+            end
+
+            return require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")(filename)
           end,
+          init_options = {
+            lint = true,
+            unstable = true,
+            suggest = {
+              imports = {
+                hosts = {
+                  ["https://deno.land"] = true,
+                  ["https://cdn.nest.land"] = true,
+                  ["https://crux.land"] = true,
+                },
+              },
+            },
+          },
         },
         tsserver = {
-          root_dir = function(...)
-            return require("lspconfig.util").root_pattern(".git")(...)
+          root_dir = function(filename)
+            local is_deno = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")
+            if is_deno then
+              return nil
+            end
+
+            return require("lspconfig.util").root_pattern("package.json")(filename)
           end,
           single_file_support = false,
           settings = {

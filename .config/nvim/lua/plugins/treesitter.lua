@@ -19,7 +19,9 @@ return {
         "rust",
         "scss",
         "sql",
+        "vue",
         "svelte",
+        "prisma",
       },
 
       -- matchup = {
