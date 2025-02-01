@@ -1,3 +1,5 @@
+-- floating으로 terminal을 띄우기 위함
+
 return {
 
   "akinsho/toggleterm.nvim",

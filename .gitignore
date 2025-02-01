@@ -60,4 +60,4 @@ Pods/
 Brewfile.lock.json
 
 # Copilot
-.config/github-copilot/hosts.json
+.config/github-copilot/*

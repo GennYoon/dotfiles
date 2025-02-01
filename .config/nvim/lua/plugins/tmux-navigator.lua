@@ -1,3 +1,5 @@
+-- Neovim에서 Tmux Window 창을 넘어가기 위한 기능 및 단축키 추가
+
 return {
   {
     "christoomey/vim-tmux-navigator",
