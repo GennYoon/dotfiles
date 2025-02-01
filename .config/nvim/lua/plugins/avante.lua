@@ -1,4 +1,4 @@
--- AI 개발
+-- NOTE: AI 개발(https://github.com/yetone/avante.nvim)
 
 return {
   "yetone/avante.nvim",
