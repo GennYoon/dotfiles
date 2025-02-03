@@ -59,7 +59,7 @@ return {
       { "<leader>fs", "<cmd>Telescope live_grep<cr>", desc = "File [S]tring in cmd" },
       {
         "<leader>ft",
-        "<cmd>TodoTelescope keywords=TODO,FIX,FIXME,BUG,FIXIT,ISSUE,NOTE,HACK,WARN,WARNING,PERF,OPTIM,PERFORMANCE,OPTIMAZE,TEST,TESTING,PASSED,FAILED<cr>",
+        "<cmd>TodoTelescope keywords=TODO,FIX,FIXME,BUG,FIXIT,ISSUE,HACK,WARN,WARNING,PERF,OPTIM,PERFORMANCE,OPTIMAZE,TEST,TESTING,PASSED,FAILED<cr>",
         desc = "File [T]odos",
       },
 
