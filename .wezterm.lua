@@ -19,14 +19,14 @@ config.colors = {
 
 -- config.font = wezterm.font("MesloLGS Nerd Font Mono")
 config.font = wezterm.font("JetBrainsMonoNL Nerd Font")
-config.font_size = 16.5
+config.font_size = 14.5
 
 config.enable_tab_bar = false
 
 config.window_decorations = "RESIZE"
 
-config.window_background_opacity = 0.75
-config.macos_window_background_blur = 10
+config.window_background_opacity = 0.85
+config.macos_window_background_blur = 5
 
 config.enable_scroll_bar = false
 
