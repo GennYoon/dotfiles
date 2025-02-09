@@ -28,5 +28,11 @@ cask "1password"
 cask "arc"
 cask "notion"
 
+cask "flutter"
+brew "openjdk@11"
+cask "google-chrome"
+cask "android-studio"
+brew "cocoapods"
+
 cask "font-jetbrains-mono-nerd-font"
 
