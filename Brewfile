@@ -1,3 +1,5 @@
+tap "supabase/tap"
+
 brew "cask"
 brew "mas"
 
@@ -28,11 +30,14 @@ cask "1password"
 cask "arc"
 cask "notion"
 
+brew "supabase/tap/supabase"
+
 cask "flutter"
 brew "openjdk@11"
 cask "google-chrome"
 cask "android-studio"
 brew "cocoapods"
+brew "fastlane"
 
 cask "font-jetbrains-mono-nerd-font"
 
