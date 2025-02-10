@@ -45,6 +45,8 @@ return {
       { "<leader>/", hidden = true },
       { "<leader>?", hidden = true },
 
+      { "<leader>tr", hidden = true },
+
       -- Code
       { "<leader>c", group = "[C]ode" },
       { "<leader>ca", "<cmd>vim.lsp.buf.code_actions<cr>", desc = "Code [A]ction" },
@@ -59,8 +61,25 @@ return {
       { "<leader>fs", "<cmd>Telescope live_grep<cr>", desc = "File [S]tring in cmd" },
       {
         "<leader>ft",
-        "<cmd>TodoTelescope keywords=TODO,FIX,FIXME,BUG,FIXIT,ISSUE,HACK,WARN,WARNING,PERF,OPTIM,PERFORMANCE,OPTIMAZE,TEST,TESTING,PASSED,FAILED<cr>",
+        "<cmd>TodoTelescope keywords=TODO,FIX,FIXME,BUG,FIXIT,ISSUE,HACK,WARN,WARNING,PERF,OPTIM,PERFORMANCE,OPTIMAZE<cr>",
         desc = "File [T]odos",
+      },
+
+      -- Neotest
+      { "<leader>n", icon = "", group = "[N]oe Test" },
+      {
+        "<leader>nr",
+        function()
+          require("neotest").run()
+        end,
+        desc = "Run [R]un",
+      },
+      {
+        "<leader>ns",
+        function()
+          require("neotest").summary()
+        end,
+        desc = "Run [S]ummary",
       },
 
       -- Terminal
@@ -71,9 +90,10 @@ return {
       { "<leader>a", icon = "🤖", group = "[A]I" },
 
       -- Tab
-      { "<leader><tab>", group = "[Tab]" },
-      { "<leader><tab>w", "<cmd>BufferLinePickClose<cr>", desc = "Close Tab" },
-      { "<leader><tab>s", "<cmd>w<cr>", desc = "Save Tab" },
+      { "<leader>w", group = "Tab" },
+      { "<leader>ww", "<cmd>BufferLinePickClose<cr>", desc = "Close Tab" },
+      { "<leader>wa", "<cmd>BufferLineCloseOthers<cr>", desc = "All Clase Tab" },
+      { "<leader>ws", "<cmd>w<cr>", desc = "Save Tab" },
     }
 
     wk.setup(setup)
