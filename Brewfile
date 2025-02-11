@@ -32,7 +32,8 @@ cask "notion"
 
 brew "supabase/tap/supabase"
 
-cask "flutter"
+# Flutter를 개발하기 위한 환경
+cask "flutter" 
 brew "openjdk@11"
 cask "google-chrome"
 cask "android-studio"
