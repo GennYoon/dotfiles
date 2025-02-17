@@ -30,7 +30,9 @@ cask "1password"
 cask "arc"
 cask "notion"
 
+# Supabase 개발
 brew "supabase/tap/supabase"
+
 
 # Flutter를 개발하기 위한 환경
 cask "flutter" 
