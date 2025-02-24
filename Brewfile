@@ -14,6 +14,7 @@ brew "starship"
 brew "zsh"
 brew "lazygit"
 brew "tmux"
+brew "sqlfluff"
 
 brew "stow"
 
@@ -29,6 +30,9 @@ cask "docker"
 cask "1password"
 cask "arc"
 cask "notion"
+
+#
+brew "flyctl"
 
 # Supabase 개발
 brew "supabase/tap/supabase"
