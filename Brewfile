@@ -31,6 +31,10 @@ cask "1password"
 cask "arc"
 cask "notion"
 
+# Database
+brew "dbml-cli"
+cask "datagrip"
+
 #
 brew "flyctl"
 

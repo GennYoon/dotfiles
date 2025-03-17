@@ -36,7 +36,7 @@ return {
       },
       vtsls = {
         root_dir = function(filename)
-          return nvim_ls.util.root_pattern("package.json")(filename)
+          return nvim_lsp.util.root_pattern("package.json")(filename)
         end,
         single_file_support = false,
       },
