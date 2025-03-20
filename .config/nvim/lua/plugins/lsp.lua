@@ -36,15 +36,15 @@ return {
       },
       vtsls = {
         -- NOTE: deno를 이용할때 typescript formatting을 하지 않게 합니다.
-        root_dir = function(filename)
-          local is_deno = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")
-
-          if is_deno then
-            return nil
-          end
-          return require("lspconfig.util").root_pattern("package.json")(filename)
-        end,
-        single_file_support = true,
+        -- root_dir = function(filename)
+        --   local is_deno = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")
+        --
+        --   if is_deno then
+        --     return nil
+        --   end
+        --   return require("lspconfig.util").root_pattern("package.json")(filename)
+        -- end,
+        -- single_file_support = true,
       },
     },
   },
