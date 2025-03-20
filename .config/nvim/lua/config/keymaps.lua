@@ -12,18 +12,18 @@
 -- M <option>
 -- D <command>
 
-local opts = { noremap = true, silent = true }
-
 -- Delete Keymaps
-vim.keymap.del("n", "<leader>n", nil)
-vim.keymap.del("n", "<leader>E", nil)
-vim.keymap.del("n", "<leader>l", nil)
-vim.keymap.del("n", "<leader>K", nil)
-vim.keymap.del("n", "<leader>|", nil)
-vim.keymap.del("n", "<leader>-", nil)
-vim.keymap.del("n", "<leader><space>", nil)
-vim.keymap.del("n", "<leader>`", nil)
-vim.keymap.del("n", "<leader>/", nil)
-vim.keymap.del("n", "<leader>?", nil)
+vim.api.nvim_del_keymap("n", "<leader>n")
+vim.api.nvim_del_keymap("n", "<leader>E")
+vim.api.nvim_del_keymap("n", "<leader>l")
+vim.api.nvim_del_keymap("n", "<leader>K")
+vim.api.nvim_del_keymap("n", "<leader>|")
+vim.api.nvim_del_keymap("n", "<leader>-")
+vim.api.nvim_del_keymap("n", "<leader><space>")
+vim.api.nvim_del_keymap("n", "<leader>`")
+vim.api.nvim_del_keymap("n", "<leader>/")
+vim.api.nvim_del_keymap("n", "<leader>?")
 
-vim.keymap.set("n", "sh", "<C-w>h")
+vim.api.nvim_set_keymap("n", "sh", "<C-w>h", { noremap = false })
+vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = false })
+vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = false })
