@@ -31,6 +31,9 @@ cask "1password"
 cask "arc"
 cask "notion"
 
+# Python
+brew "pyright"
+
 # Database
 brew "dbml-cli"
 cask "datagrip"
