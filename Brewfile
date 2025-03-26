@@ -37,8 +37,9 @@ brew "pyright"
 # Database
 brew "dbml-cli"
 cask "datagrip"
+cask "postman"
 
-#
+
 brew "flyctl"
 
 # Supabase 개발
