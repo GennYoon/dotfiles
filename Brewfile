@@ -30,6 +30,7 @@ cask "docker"
 cask "1password"
 cask "arc"
 cask "notion"
+cask "cursor"
 
 # Python
 brew "pyright"

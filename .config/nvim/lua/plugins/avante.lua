@@ -4,17 +4,15 @@ return {
   "yetone/avante.nvim",
   event = "VeryLazy",
   lazy = false,
-  version = false,
+  version = false, -- 절대 "*"로 설정하지 않기!
   opts = {
     ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
-    provider = "copilot",
+    provider = "openai",
     openai = {
-      endpoint = "https://api.openai.com/v1",
-      model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
-      timeout = 30000, -- timeout in milliseconds
-      temperature = 0, -- adjust if needed
-      max_tokens = 4096,
-      -- reasoning_effort = "high" -- only supported for reasoning models (o1, etc.)
+      model = "gpt-4o-mini", -- Use gpt-4o-mini for OpenAI
+    },
+    claude = {
+      model = "claude-3-7-sonnet-20250219",
     },
   },
   build = "make",
@@ -25,6 +23,7 @@ return {
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
     "echasnovski/mini.pick", -- for file_selector provider mini.pick
+    "echasnovski/mini.icons", -- or echasnovski/mini.icons
     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
     "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
     "ibhagwan/fzf-lua", -- for file_selector provider fzf
