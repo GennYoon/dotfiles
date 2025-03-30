@@ -32,6 +32,9 @@ cask "arc"
 cask "notion"
 cask "cursor"
 
+# Go
+brew "go"
+
 # Python
 brew "pyright"
 
