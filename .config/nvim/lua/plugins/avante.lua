@@ -7,13 +7,7 @@ return {
   version = false, -- 절대 "*"로 설정하지 않기!
   opts = {
     ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
-    provider = "openai",
-    openai = {
-      model = "gpt-4o-mini", -- Use gpt-4o-mini for OpenAI
-    },
-    claude = {
-      model = "claude-3-7-sonnet-20250219",
-    },
+    provider = "copilot",
   },
   build = "make",
   dependencies = {
