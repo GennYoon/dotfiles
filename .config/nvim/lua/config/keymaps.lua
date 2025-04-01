@@ -1,29 +1,40 @@
--- Modes
--- normal_mode = "n",
--- insert_mode = "i",
--- visual_mode = "v",
--- visual_block_mode = "x",
--- term_mode = "t",
--- command_mode = "c",
+local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
 
--- Meta Key
--- S <shift>
--- C <control>
--- M <option>
--- D <command>
+keymap.set("n", "x", '"_x')
 
--- Delete Keymaps
-vim.api.nvim_del_keymap("n", "<leader>n")
-vim.api.nvim_del_keymap("n", "<leader>E")
-vim.api.nvim_del_keymap("n", "<leader>l")
-vim.api.nvim_del_keymap("n", "<leader>K")
-vim.api.nvim_del_keymap("n", "<leader>|")
-vim.api.nvim_del_keymap("n", "<leader>-")
-vim.api.nvim_del_keymap("n", "<leader><space>")
-vim.api.nvim_del_keymap("n", "<leader>`")
-vim.api.nvim_del_keymap("n", "<leader>/")
-vim.api.nvim_del_keymap("n", "<leader>?")
+-- Increment/decrement
+keymap.set("n", "+", "<C-a>")
+keymap.set("n", "-", "<C-x>")
 
-vim.api.nvim_set_keymap("n", "sh", "<C-w>h", { noremap = false })
-vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = false })
-vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = false })
+-- Select all
+keymap.set("n", "<C-a>", "gg<S-v>G")
+
+-- Save file and quit
+keymap.set("n", "<Leader>w", ":update<Return>", opts)
+keymap.set("n", "<Leader>q", ":quit<Return>", opts)
+keymap.set("n", "<Leader>Q", ":qa<Return>", opts)
+
+-- Tabs
+keymap.set("n", "te", ":tabedit")
+keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+keymap.set("n", "tw", ":tabclose<Return>", opts)
+
+-- Split window
+keymap.set("n", "ss", ":split<Return>", opts)
+keymap.set("n", "sv", ":vsplit<Return>", opts)
+
+-- Move window
+keymap.set("n", "sh", "<C-w>h")
+keymap.set("n", "sk", "<C-w>k")
+keymap.set("n", "sj", "<C-w>j")
+keymap.set("n", "sl", "<C-w>l")
+
+-- Resize window
+keymap.set("n", "<C-S-h>", "<C-w><")
+keymap.set("n", "<C-S-l>", "<C-w>>")
+keymap.set("n", "<C-S-k>", "<C-w>+")
+keymap.set("n", "<C-S-j>", "<C-w>-")
+
+keymap.set("n", "sh", "<C-w>h", opts)
