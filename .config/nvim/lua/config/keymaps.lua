@@ -38,3 +38,22 @@ keymap.set("n", "<C-S-k>", "<C-w>+")
 keymap.set("n", "<C-S-j>", "<C-w>-")
 
 keymap.set("n", "sh", "<C-w>h", opts)
+
+-- Remove Test Whtchkey
+vim.api.nvim_del_keymap("n", "<leader>tl")
+vim.api.nvim_del_keymap("n", "<leader>to")
+vim.api.nvim_del_keymap("n", "<leader>tO")
+vim.api.nvim_del_keymap("n", "<leader>tr")
+vim.api.nvim_del_keymap("n", "<leader>ts")
+vim.api.nvim_del_keymap("n", "<leader>tS")
+vim.api.nvim_del_keymap("n", "<leader>tt")
+vim.api.nvim_del_keymap("n", "<leader>tT")
+vim.api.nvim_del_keymap("n", "<leader>tw")
+
+local Keys = require("lazyvim.plugins.lsp.keymaps").get()
+vim.list_extend(Keys, {
+  { "<leader>t", "", desc = "Termial" },
+  { "<leader>tt", "<cmd>ToggleTerm direction=float<cr>", desc = "Float Termial" },
+})
+
+-- vim.api.nvim_set_keymap("n", "<leader>tt", "<cmd>ToggleTerm direction=float<cr>", { desc = "Float Termial" })
