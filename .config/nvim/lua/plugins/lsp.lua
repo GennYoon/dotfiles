@@ -60,6 +60,35 @@ return {
             },
           },
         },
+        prismals = {
+          filetypes = { "prisma" },
+        },
+        postgres_lsp = {
+          cmd = { "postgrestools", "lsp-proxy" },
+          filetypes = { "sql" },
+          root_dir = vim.fs.root(0, { "postgrestools.jsonc" }),
+          single_file_support = true,
+        },
+        pyright = {
+          settings = {
+            pyright = {
+              disableOrganizeImports = true,
+            },
+            python = {
+              analysis = {
+                ignore = { "*" },
+              },
+            },
+          },
+        },
+        ruff = {
+          cmd_env = { RUFF_TRACE = "messages" },
+          init_options = {
+            settings = {
+              logLevel = "error",
+            },
+          },
+        },
         html = {},
         lua_ls = {
           -- enabled = false
