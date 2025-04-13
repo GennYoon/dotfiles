@@ -39,6 +39,9 @@ brew "go"
 # Python
 brew "pyright"
 
+# Typescript
+brew "biome"
+
 # Database
 brew "dbml-cli"
 cask "datagrip"

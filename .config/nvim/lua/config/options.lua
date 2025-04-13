@@ -2,6 +2,8 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 vim.g.mapleader = " "
+-- Enable this option to avoid conflicts wdith Prettier.
+vim.g.lazyvim_prettier_needs_config = true
 
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
