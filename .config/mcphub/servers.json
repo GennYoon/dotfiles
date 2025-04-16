@@ -1,0 +1,22 @@
+{
+  "nativeMCPServers": [
+    
+  ],
+  "mcpServers": {
+    "github": {
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": ""
+      },
+      "disabled": true,
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "command": "docker"
+    }
+  }
+}
