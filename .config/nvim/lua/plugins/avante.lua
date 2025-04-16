@@ -3,11 +3,39 @@
 return {
   "yetone/avante.nvim",
   event = "VeryLazy",
-  lazy = false,
+  lazy = true,
   version = false, -- 절대 "*"로 설정하지 않기!
   opts = {
     ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
-    provider = "copilot",
+    provider = "openai", -- 기본 제공자
+    openai = {
+      model = "gpt-4o-mini", -- 기본 모델
+    },
+    system_prompt = function()
+      local hub = require("mcphub").get_hub_instance()
+      if not hub then
+        return nil, vim.notify("MCP Hub not initialized")
+      end
+
+      return hub:get_active_servers_prompt()
+    end,
+    custom_tools = function()
+      return {
+        require("mcphub.extensions.avante").mcp_tool(),
+      }
+    end,
+    disabled_tools = {
+      "list_files", -- Built-in file operations
+      "search_files",
+      "read_file",
+      "create_file",
+      "rename_file",
+      "delete_file",
+      "create_dir",
+      "rename_dir",
+      "delete_dir",
+      "bash", -- Built-in terminal access
+    },
   },
   build = "make",
   dependencies = {

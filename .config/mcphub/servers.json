@@ -1,22 +1,19 @@
 {
-  "nativeMCPServers": [
-    
-  ],
-  "mcpServers": {
-    "github": {
-      "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": ""
-      },
-      "disabled": true,
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "-e",
-        "GITHUB_PERSONAL_ACCESS_TOKEN",
-        "ghcr.io/github/github-mcp-server"
+  "nativeMCPServers": {
+    "neovim": {
+      "disabled": false
+    },
+    "mcphub": {
+      "disabled": false,
+      "disabled_tools": [
+        
       ],
-      "command": "docker"
+      "custom_instructions": {
+        "disabled": false
+      }
     }
-  }
+  },
+  "mcpServers": [
+    
+  ]
 }
