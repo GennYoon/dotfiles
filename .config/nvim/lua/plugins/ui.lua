@@ -5,7 +5,15 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
-    enabled = false,
+    config = function()
+      require("lualine").setup({
+        sections = {
+          lualine_x = {
+            { require("mcphub.extensions.lualine") },
+          },
+        },
+      })
+    end,
   },
   -- messages, cmdline and the popupmenu
   {
