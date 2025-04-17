@@ -1,11 +1,14 @@
 local wezterm = require("wezterm")
 return {
 	adjust_window_size_when_changing_font_size = false,
-	-- color_scheme = 'termnial.sexy',
-	color_scheme = "Catppuccin Mocha",
+	color_scheme = "Tokyo Night Moon",
+	-- color_scheme = "Catppuccin Mocha",
+	-- color_scheme = "Catppuccin Macchiato",
 	enable_tab_bar = false,
 	font_size = 16.0,
-	font = wezterm.font("JetBrainsMonoNL Nerd Font"),
+	font = wezterm.font("JetBrainsMonoNL Nerd Font", {
+		harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
+	}),
 	-- macos_window_background_blur = 40,
 	macos_window_background_blur = 30,
 
