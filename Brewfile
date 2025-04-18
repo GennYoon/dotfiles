@@ -32,6 +32,9 @@ cask "docker"
 cask "1password"
 cask "arc"
 cask "notion"
+cask "figma"
+
+brew "serverless"
 
 # Go
 brew "go"
