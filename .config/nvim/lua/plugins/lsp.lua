@@ -67,7 +67,7 @@ return {
         postgres_lsp = {
           cmd = { "postgrestools", "lsp-proxy" },
           filetypes = { "sql" },
-          root_dir = vim.fs.root(0, { "postgrestools.jsonc" }),
+          root_markers = { "postgrestools.jsonc" },
           single_file_support = true,
         },
         pyright = {
