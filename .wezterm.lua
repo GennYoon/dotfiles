@@ -6,9 +6,7 @@ return {
 	-- color_scheme = "Catppuccin Macchiato",
 	enable_tab_bar = false,
 	font_size = 16.0,
-	font = wezterm.font("JetBrainsMonoNL Nerd Font", {
-		harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
-	}),
+	font = wezterm.font("JetBrainsMonoNL Nerd Font"),
 	-- macos_window_background_blur = 40,
 	macos_window_background_blur = 30,
 
