@@ -62,3 +62,6 @@ Brewfile.lock.json
 # Copilot
 .config/github-copilot/*
 .config/flutter/*
+
+# Env
+.env*

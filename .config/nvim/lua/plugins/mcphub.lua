@@ -1,27 +1,27 @@
 return {
   "ravitemer/mcphub.nvim",
-  lazy = false,
   dependencies = {
-    "nvim-lua/plenary.nvim",
+    "nvim-lua/plenary.nvim", -- 비동기 작업에 필요
   },
-  cmd = "MCPHub",
-  build = "npm install -g mcp-hub@latest",
+  build = "npm install -g mcp-hub@latest", -- 핵심 MCP Hub 서버 설치
   config = function()
     require("mcphub").setup({
-      auto_approve = true,
+      -- 필수 구성
+      port = 8100, -- 기본 허브 포트
+      config = vim.fn.expand("~/.config/nvim/mcpservers.json"), -- 절대 경로 필요
+
+      -- 선택적 사용자 정의
+      log = {
+        level = vim.log.levels.WARN, -- DEBUG, INFO, WARN, ERROR
+        to_file = true, -- ~/.local/state/nvim/mcphub.log 생성
+      },
       extensions = {
         avante = {
           make_slash_commands = true,
         },
       },
-      log = {
-        level = vim.log.levels.WARN, -- DEBUG, INFO, WARN, ERROR
-        to_file = false,
-        file_path = nil,
-        prefix = "MCPHub",
-      },
       on_ready = function()
-        vim.notify("MCP Hub가 시작되었습니다!")
+        vim.notify("MCP Hub가 온라인입니다!")
       end,
     })
   end,

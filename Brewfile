@@ -9,6 +9,8 @@ brew "fzf"
 brew "fd"
 brew "gh"
 
+brew "uv"
+
 brew "neovim"
 brew "starship"
 brew "zsh"
