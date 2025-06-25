@@ -36,6 +36,16 @@ cask "figma"
 
 brew "serverless"
 
+# AI 개발 환경
+cask "ollama"
+cask "raycast"
+
+# 단축키 관리
+cask "leader-key"
+
+# 단축키 생성
+cask "homerow"
+
 # Go
 brew "go"
 
