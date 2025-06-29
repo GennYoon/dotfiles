@@ -35,3 +35,9 @@ vim.opt.splitkeep = "cursor"
 
 vim.opt.formatoptions:append({ "r" })
 vim.opt.laststatus = 3
+
+-- codecompanion.nvim 설정
+vim.keymap.set({ "n", "v" }, "<leader>ac", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>aa", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
+vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
+vim.cmd([[cab cc codecompanion]]) -- Expend 'cc' into 'CodeCompanion' in the command line
