@@ -35,6 +35,7 @@ vim.opt.splitkeep = "cursor"
 
 vim.opt.formatoptions:append({ "r" })
 vim.opt.laststatus = 3
+vim.lsp.inlay_hint.enable(false) -- Disable inlay hints globally
 
 -- codecompanion.nvim 설정
 vim.keymap.set({ "n", "v" }, "<leader>ac", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
