@@ -20,8 +20,25 @@ return {
       gemini = {
         model = "gemini-2.5-flash",
       },
+      avante_commands = {
+        name = "avante_commands",
+        module = "blink.compat.source",
+        score_offset = 90, -- show at a higher priority than lsp
+        opts = {},
+      },
+      avante_files = {
+        name = "avante_files",
+        module = "blink.compat.source",
+        score_offset = 100, -- show at a higher priority than lsp
+        opts = {},
+      },
+      avante_mentions = {
+        name = "avante_mentions",
+        module = "blink.compat.source",
+        score_offset = 1000, -- show at a higher priority than lsp
+        opts = {},
+      },
     },
-    file_selector = "telescope",
     input = "dressing",
     system_prompt = function()
       local hub = require("mcphub").get_hub_instance()
@@ -69,7 +86,7 @@ return {
     "stevearc/dressing.nvim", -- for input provider dressing
     "folke/snacks.nvim", -- for input provider snacks
     "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-    "zbirenbaum/copilot.lua", -- for providers='copilot'
+    -- "zbirenbaum/copilot.lua", -- for providers='copilot'
     {
       -- support for image pasting
       "HakonHarnes/img-clip.nvim",
