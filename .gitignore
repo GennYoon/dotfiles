@@ -64,4 +64,10 @@ Brewfile.lock.json
 .config/flutter/*
 
 # Env
-.env*
+.env
+
+.DS_Store
+tmux/plugins/
+raycast
+fzf
+history.txt

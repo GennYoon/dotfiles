@@ -1,0 +1,6 @@
+--target=~/.config
+--ignore=.stowrc
+--ignore=Brewfile
+--ignore=DS_Store
+--ignore=config
+--ignore=webchemist/*

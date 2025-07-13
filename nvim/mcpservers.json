@@ -1,0 +1,67 @@
+{
+  "mcpServers": {
+    "Notion": {
+      "disabled": false,
+      "args": [
+        "-y",
+        "@notionhq/notion-mcp-server",
+        "-e",
+        "OPENAPI_MCP_HEADERS={\"Authorization\": \"Bearer $NOTION_API_KEY\", \"Notion-Version\": \"2022-06-28\" }"
+      ],
+      "command": "npx",
+      "env": {
+        "NOTION_API_KEY": "NOTION_API_KEY"
+      }
+    },
+    "SequentialThinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "Playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
+    "Context7": {
+      "start_on_launch": true,
+      "command": "npx",
+      "working_directory": null,
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": [
+        
+      ],
+      "autoApprove": [
+        
+      ]
+    },
+    "Filesystem": {
+      "disabled": false,
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "~/.config/servers/filesystem"
+      ],
+      "command": "npx"
+    },
+    "Sentry": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://mcp.sentry.dev/mcp"
+      ]
+    }
+  },
+  "nativeMCPServers": {
+    "neovim": {
+      "disabled": false
+    }
+  }
+}

@@ -8,6 +8,8 @@ brew "eza"
 brew "fzf"
 brew "fd"
 brew "gh"
+brew "uv"
+brew "ta-lib"
 
 brew "neovim"
 brew "starship"
@@ -30,11 +32,13 @@ cask "slack"
 cask "wezterm"
 cask "docker"
 cask "1password"
-cask "arc"
 cask "notion"
 cask "figma"
 
 brew "serverless"
+
+# 강의하기 환경
+cask "keycastr"
 
 # AI 개발 환경
 cask "ollama"

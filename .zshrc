@@ -104,58 +104,18 @@ source $ZSH/oh-my-zsh.sh
 # Alias
 alias ls="eza --icons"
 alias ll="eza -l -g --icons"
-#
+
 alias vi="nvim"
 alias vim="nvim"
 alias tf="terraform"
-#
-# # Python
-# alias pip="pip3"
-# alias python="python3"
-#
-# # Tmux
-# alias tl="tmux ls"
-# alias ta="tmux attach -t"
-# alias tk="tmux kill-session -t"
-#
-#
-#
-# # brew를 통해 설치한 zsh의 plugin으로 자동완성과 명령어 하이라이트입니다.
-# source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#
-#
+
 # Starship
 eval "$(starship init zsh)"
-#
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-#
-# # nvm이 설치되어 있어야합니다.
-# # 프로젝내부에 .nvmrc 파일을 인식하여 node를 해당버전으로 변경시킵니다.
-# # 이외 페이지에 이동시에 nvm alias default 버전으로 변경됩니다.
-# autoload -U add-zsh-hook
-# load-nvmrc() {
-#   local node_version="$(nvm version)"
-#   local nvmrc_path="$(nvm_find_nvmrc)"
-#
-#   if [ -n "$nvmrc_path" ]; then
-#     local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-#
-#     if [ "$nvmrc_node_version" = "N/A" ]; then
-#       nvm install
-#     elif [ "$nvmrc_node_version" != "$node_version" ]; then
-#       nvm use
-#     fi
-#   elif [ "$node_version" != "$(nvm version default)" ]; then
-#     echo "Reverting to nvm default version"
-#     nvm use default
-#   fi
-# }
-# add-zsh-hook chpwd load-nvmrc
-# load-nvmrc
 
 
 # pnpm
