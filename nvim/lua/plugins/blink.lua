@@ -1,4 +1,5 @@
 return {
+  { "L3MON4D3/LuaSnip", keys = {} },
   {
     "saghen/blink.compat",
     version = "2.*",
@@ -9,7 +10,7 @@ return {
     "saghen/blink.cmp",
     dependencies = { "rafamadriz/friendly-snippets" },
 
-    version = "1.*",
+    version = "*",
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     opts = {
@@ -30,13 +31,26 @@ return {
           },
         },
         menu = {
+          border = nil,
+          scrolloff = 1,
+          scrollbar = false,
           draw = {
-            treesitter = { "lsp" },
+            columns = {
+              { "kind_icon" },
+              { "label", "label_description", gap = 1 },
+              { "kind" },
+              { "source_name" },
+            },
           },
         },
         documentation = {
+          window = {
+            border = nil,
+            scrollbar = false,
+            winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,EndOfBuffer:BlinkCmpDoc",
+          },
           auto_show = true,
-          auto_show_delay_ms = 200,
+          auto_show_delay_ms = 500,
         },
         ghost_text = {
           enabled = vim.g.ai_cmp,
@@ -44,7 +58,7 @@ return {
       },
 
       -- experimental signature help support
-      -- signature = { enabled = true },
+      signature = { enabled = true },
 
       sources = {
         -- adding any nvim-cmp sources here will enable them
@@ -54,15 +68,14 @@ return {
           "avante_mentions",
           "avante_files",
         },
-        default = { "lsp", "path", "snippets", "buffer" },
-        -- default = { "lazydev" },
-        -- providers = {
-        --   lazydev = {
-        --     name = "LazyDev",
-        --     module = "lazydev.integrations.blink",
-        --     score_offset = 100, -- show at a higher priority than lsp
-        --   },
-        -- },
+        default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+        providers = {
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            score_offset = 100,
+          },
+        },
       },
 
       cmdline = {
@@ -76,7 +89,3 @@ return {
     },
   },
 }
-
--- "avante_commands",
--- "avante_mentions",
--- "avante_files",
