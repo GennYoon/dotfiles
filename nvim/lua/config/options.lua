@@ -1,4 +1,4 @@
-vim.opt.wrap = true
-vim.g.codeium_os = "Darwin"
-vim.g.codeium_arch = "arm64"
-vim.nu = false
+vim.opt.wrap = false
+vim.opt.linebreak = false
+vim.opt.relativenumber = false
+vim.g.lazyvim_prettier_needs_config = false

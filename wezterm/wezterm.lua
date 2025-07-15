@@ -9,11 +9,11 @@ return {
 	enable_tab_bar = false,
 	font_size = 16.0,
 	font = wezterm.font("JetBrainsMonoNL Nerd Font"),
-	-- macos_window_background_blur = 40,
-	macos_window_background_blur = 30,
+	macos_window_background_blur = 40,
+	-- macos_window_background_blur = 30,
 
 	-- window_background_opacity = 1.0,
-	window_background_opacity = 0.92,
+	window_background_opacity = 0.9,
 	window_decorations = "RESIZE",
 	keys = {
 		{ key = "q", mods = "CTRL", action = wezterm.action.ToggleFullScreen },
