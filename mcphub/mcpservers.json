@@ -1,0 +1,64 @@
+{
+  "mcpServers": {
+    "Context7": {
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "autoApprove": [],
+      "command": "npx",
+      "env": [],
+      "start_on_launch": true,
+      "working_directory": null
+    },
+    "Notion": {
+      "args": [
+        "-y",
+        "@notionhq/notion-mcp-server",
+        "-e",
+        "OPENAPI_MCP_HEADERS={\"Authorization\": \"Bearer $NOTION_API_KEY\", \"Notion-Version\": \"2022-06-28\" }"
+      ],
+      "command": "npx",
+      "disabled": false,
+      "env": {
+        "NOTION_API_KEY": "NOTION_API_KEY"
+      }
+    },
+    "Playwright": {
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "command": "npx"
+    },
+    "Sentry": {
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://mcp.sentry.dev/mcp"
+      ],
+      "autoApprove": [],
+      "command": "npx"
+    },
+    "SequentialThinking": {
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "command": "npx",
+      "disabled": false
+    },
+    "filesystem": {
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/webchemist/Workspace"
+      ],
+      "command": "npx"
+    }
+  },
+  "nativeMCPServers": {
+    "neovim": {
+      "disabled": false
+    }
+  }
+}

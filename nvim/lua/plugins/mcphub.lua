@@ -7,8 +7,8 @@ return {
   config = function()
     require("mcphub").setup({
       -- 필수 구성
-      port = 8100, -- 기본 허브 포트
-      config = vim.fn.expand("~/.config/nvim/mcpservers.json"), -- 절대 경로 필요
+      port = 8080, -- 기본 허브 포트
+      config = vim.fn.expand("~/.config/mcphub/mcpservers.json"), -- 절대 경로 필요
 
       -- 선택적 사용자 정의
       log = {

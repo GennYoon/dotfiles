@@ -1,19 +1,36 @@
 local wezterm = require("wezterm")
 
+wezterm.on("open-uri", function(window, pane, uri)
+	local start, match_end = uri:find("mailto:")
+	if start == 1 then
+		local recipient = uri:sub(match_end + 1)
+		window:perform_action(
+			wezterm.action.SpawnCommandInNewWindow({
+				args = { "mutt", recipient },
+			}),
+			pane
+		)
+		-- prevent the default action from opening in a browser
+		return false
+	end
+	-- otherwise, by not specifying a return value, we allow later
+	-- handlers and ultimately the default action to caused the
+	-- URI to be opened in the browser
+end)
+
 return {
 	adjust_window_size_when_changing_font_size = false,
-	-- color_scheme = "nord",
+	color_scheme = "nord",
 	-- color_scheme = "Tokyo Night Moon",
-	color_scheme = "Catppuccin Mocha",
+	-- color_scheme = "Catppuccin Mocha",
 	-- color_scheme = "Catppuccin Macchiato",
 	enable_tab_bar = false,
 	font_size = 16.0,
 	font = wezterm.font("JetBrainsMonoNL Nerd Font"),
-	macos_window_background_blur = 40,
-	-- macos_window_background_blur = 30,
+	macos_window_background_blur = 20,
 
 	-- window_background_opacity = 1.0,
-	window_background_opacity = 0.9,
+	window_background_opacity = 0.92,
 	window_decorations = "RESIZE",
 	keys = {
 		{ key = "q", mods = "CTRL", action = wezterm.action.ToggleFullScreen },

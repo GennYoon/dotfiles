@@ -1,5 +1,4 @@
 return {
-  { "L3MON4D3/LuaSnip", keys = {} },
   {
     "saghen/blink.compat",
     version = "2.*",
@@ -8,13 +7,17 @@ return {
   },
   {
     "saghen/blink.cmp",
-    dependencies = { "rafamadriz/friendly-snippets" },
-
+    build = vim.g.lazyvim_blink_main and "cargo build --release",
     version = "*",
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+    },
+
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     opts = {
       snippets = {
+        preset = "luasnip",
         expand = function(snippet, _)
           return LazyVim.cmp.expand(snippet)
         end,
@@ -50,7 +53,7 @@ return {
             winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,EndOfBuffer:BlinkCmpDoc",
           },
           auto_show = true,
-          auto_show_delay_ms = 500,
+          auto_show_delay_ms = 200,
         },
         ghost_text = {
           enabled = vim.g.ai_cmp,
@@ -82,10 +85,10 @@ return {
         enabled = false,
       },
 
-      keymap = {
-        preset = "enter",
-        ["<C-y>"] = { "select_and_accept" },
-      },
+      -- keymap = {
+      --   preset = "enter",
+      --   ["<C-y>"] = { "select_and_accept" },
+      -- },
     },
   },
 }

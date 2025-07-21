@@ -27,6 +27,7 @@ brew "zsh-autosuggestions" # zsh terminal에서 자동완성
 brew "zsh-syntax-highlighting" # zsh terminal에서 문법 하이라이트
 brew "zoxide" # z path로 이동
 
+cask "zoom"
 cask "slack"
 
 cask "wezterm"
