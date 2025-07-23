@@ -63,6 +63,18 @@ return {
       bind_to_cwd = false,
       follow_current_file = { enabled = true },
       use_libuv_file_watcher = true,
+      filtered_items = {
+        visible = false,
+        show_hidden_count = false,
+        hide_dotfiles = true,
+        hide_gitignored = true,
+        hide_hidden = true,
+        hide_by_name = {},
+        never_show = {},
+        always_show = { ".env", ".env.local", ".env.development", ".env.production", ".env.example" },
+        never_show_by_pattern = {},
+        always_show_by_pattern = {},
+      },
     },
     window = {
       mappings = {

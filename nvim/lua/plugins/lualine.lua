@@ -56,7 +56,7 @@ return {
         lualine_a = { mode },
         lualine_b = { branch },
         lualine_c = { diagnostics },
-        lualine_x = { diff, require("mcphub.extensions.lualine"), "filetype" },
+        lualine_x = { diff, "filetype" },
         lualine_y = { "location" },
         lualine_z = { progress },
       },

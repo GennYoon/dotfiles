@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": ["mcp__taskmaster-ai"],
+    "deny": []
+  },
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "1"
+  },
+  "hooks": {}
+}
+

@@ -11,6 +11,17 @@ brew "gh"
 brew "uv"
 brew "ta-lib"
 
+# 화면보호기
+cmatrix
+
+# Image
+brew "imagemagick"
+
+# RMPC
+brew "cargo"
+brew "mpd"
+brew "rmpc"
+
 brew "neovim"
 brew "starship"
 brew "zsh"

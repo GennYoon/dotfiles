@@ -105,9 +105,11 @@ source $ZSH/oh-my-zsh.sh
 alias ls="eza --icons"
 alias ll="eza -l -g --icons"
 
+alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 alias tf="terraform"
+alias cld="claude"
 
 # Starship
 eval "$(starship init zsh)"

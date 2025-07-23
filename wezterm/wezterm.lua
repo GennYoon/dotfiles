@@ -20,8 +20,8 @@ end)
 
 return {
 	adjust_window_size_when_changing_font_size = false,
-	color_scheme = "nord",
-	-- color_scheme = "Tokyo Night Moon",
+	-- color_scheme = "nord",
+	color_scheme = "Tokyo Night Moon",
 	-- color_scheme = "Catppuccin Mocha",
 	-- color_scheme = "Catppuccin Macchiato",
 	enable_tab_bar = false,

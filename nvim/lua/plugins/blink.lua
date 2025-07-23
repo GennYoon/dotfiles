@@ -71,7 +71,7 @@ return {
           "avante_mentions",
           "avante_files",
         },
-        default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+        default = { "lazydev" },
         providers = {
           lazydev = {
             name = "LazyDev",
