@@ -1,95 +1,37 @@
-tap "supabase/tap"
-
+# 기본
 brew "cask"
 brew "mas"
 
-brew "ripgrep"
-brew "eza"
-brew "fzf"
-brew "fd"
-brew "gh"
-brew "uv"
-brew "ta-lib"
 
-# 화면보호기
-cmatrix
-
-# Image
-brew "imagemagick"
-
-# RMPC
-brew "cargo"
-brew "mpd"
-brew "rmpc"
-
-brew "neovim"
-brew "starship"
-brew "zsh"
-brew "lazygit"
-brew "tmux"
-brew "sqlfluff"
-
+# .config 폴더 연결
 brew "stow"
 
-brew "nvm"
+# 개발 필요
 brew "pnpm"
+brew "nvm"
+brew "uv"
 
+# 터미널
+brew "ripgrep"
+brew "eza"
+brew "zsh"
+brew "starship"
+brew "neovim"
+brew "lazygit"
+brew "tmux"
+brew "zoxide" # 쉽게 z로 이동 개선된 cd
 brew "zsh-autosuggestions" # zsh terminal에서 자동완성
 brew "zsh-syntax-highlighting" # zsh terminal에서 문법 하이라이트
-brew "zoxide" # z path로 이동
 
-cask "zoom"
-cask "slack"
-
-cask "wezterm"
-cask "docker"
-cask "1password"
-cask "notion"
-cask "figma"
-
-brew "serverless"
-
-# 강의하기 환경
-cask "keycastr"
-
-# AI 개발 환경
-cask "ollama"
-cask "raycast"
-
-# 단축키 관리
-cask "leader-key"
-
-# 단축키 생성
-cask "homerow"
-
-# Go
-brew "go"
-
-# Python
-brew "pyright"
-
-# Typescript
-brew "biome"
-
-# Database
-brew "dbml-cli"
-cask "datagrip"
-cask "postman"
-
-
-brew "flyctl"
-
-# Supabase 개발
-brew "supabase/tap/supabase"
-
-
-# Flutter를 개발하기 위한 환경
-cask "flutter" 
-brew "openjdk@11"
-cask "google-chrome"
-cask "android-studio"
-brew "cocoapods"
-brew "fastlane"
-
+# Font
 cask "font-jetbrains-mono-nerd-font"
 
+# RMPC
+brew "rust"
+brew "rustup" # 설치 후에 rustup-init 실행, source ~/.zshrc
+brew "mpd" # 설치 후에 cargo install rmpc —locked
+
+# 개발 프로그램
+cask "wezterm"
+cask "google-chrome"
+cask "raycast"

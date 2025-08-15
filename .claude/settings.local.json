@@ -1,6 +1,6 @@
 {
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "task-master-ai"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }

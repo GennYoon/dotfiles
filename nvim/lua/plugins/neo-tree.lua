@@ -1,6 +1,12 @@
--- Explorer를 설정합니다. (완)
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "MunifTanjim/nui.nvim",
+    "nvim-tree/nvim-web-devicons",
+  },
+  lazy = false,
   cmd = "Neotree",
   keys = {
     {
@@ -56,6 +62,8 @@ return {
       end,
     })
   end,
+  ---@module 'neo-tree'
+  ---@type neotree.Config
   opts = {
     sources = { "filesystem", "buffers", "git_status" },
     open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
@@ -71,12 +79,14 @@ return {
         hide_hidden = true,
         hide_by_name = {},
         never_show = {},
-        always_show = { ".env", ".env.local", ".env.development", ".env.production", ".env.example" },
+        always_show = { ".claude", ".env", ".env.local", ".env.development", ".env.production", ".env.example" },
         never_show_by_pattern = {},
         always_show_by_pattern = {},
       },
     },
     window = {
+      width = 15,
+      auto_expand_width = true,
       mappings = {
         ["l"] = "open",
         ["h"] = "close_node",
