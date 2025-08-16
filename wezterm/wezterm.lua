@@ -21,11 +21,11 @@ end)
 return {
 	adjust_window_size_when_changing_font_size = false,
 	-- color_scheme = "nord",
-	color_scheme = "Tokyo Night Moon",
-	-- color_scheme = "Catppuccin Mocha",
+	-- color_scheme = "Tokyo Night Moon",
+	color_scheme = "Catppuccin Mocha",
 	-- color_scheme = "Catppuccin Macchiato",
 	enable_tab_bar = false,
-	font_size = 16.0,
+	font_size = 15.0,
 	font = wezterm.font("JetBrainsMonoNL Nerd Font"),
 	macos_window_background_blur = 20,
 
