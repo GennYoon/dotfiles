@@ -35,3 +35,5 @@ brew "mpd" # 설치 후에 cargo install rmpc —locked
 cask "wezterm"
 cask "google-chrome"
 cask "raycast"
+cask "notion"
+cask "android-studio"
