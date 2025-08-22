@@ -31,6 +31,12 @@ brew "rust"
 brew "rustup" # 설치 후에 rustup-init 실행, source ~/.zshrc
 brew "mpd" # 설치 후에 cargo install rmpc —locked
 
+# 협업 툴
+cask "slack"
+cask "figma"
+cask "discord"
+cask "zoom"
+
 # 개발 프로그램
 cask "wezterm"
 cask "google-chrome"
