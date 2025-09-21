@@ -11,6 +11,8 @@ brew "pnpm"
 brew "nvm"
 brew "uv"
 
+brwe "sst/tap/opencode"
+
 # 터미널
 brew "ripgrep"
 brew "eza"
@@ -43,3 +45,4 @@ cask "google-chrome"
 cask "raycast"
 cask "notion"
 cask "android-studio"
+cask "obsidian"
