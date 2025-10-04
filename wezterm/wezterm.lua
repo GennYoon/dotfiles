@@ -33,7 +33,6 @@ return {
 	window_background_opacity = 0.92,
 	window_decorations = "RESIZE",
 	keys = {
-		{ key = "q", mods = "CTRL", action = wezterm.action.ToggleFullScreen },
 		{ key = "'", mods = "CTRL", action = wezterm.action.ClearScrollback("ScrollbackAndViewport") },
 		{ key = "LeftArrow", mods = "CMD", action = wezterm.action.SendString("^") },
 		{ key = "RightArrow", mods = "CMD", action = wezterm.action.SendString("$") },

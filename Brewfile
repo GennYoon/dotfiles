@@ -39,6 +39,9 @@ cask "figma"
 cask "discord"
 cask "zoom"
 
+# AI 개발 툴
+brew "claude-squad"
+brew "gh"
 cask "claude"
 
 # 개발 프로그램
