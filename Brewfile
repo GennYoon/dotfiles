@@ -11,7 +11,7 @@ brew "pnpm"
 brew "nvm"
 brew "uv"
 
-brwe "sst/tap/opencode"
+brew "sst/tap/opencode"
 
 # 터미널
 brew "ripgrep"
@@ -39,10 +39,11 @@ cask "figma"
 cask "discord"
 cask "zoom"
 
+cask "claude"
+
 # 개발 프로그램
 cask "wezterm"
 cask "google-chrome"
 cask "raycast"
 cask "notion"
 cask "android-studio"
-cask "obsidian"
