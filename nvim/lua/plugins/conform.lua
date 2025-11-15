@@ -26,17 +26,17 @@ return {
       lua = { "stylua" },
 
       -- Web technologies
-      javascript = { "prettier" },
-      typescript = { "prettier" },
-      javascriptreact = { "prettier" },
-      typescriptreact = { "prettier" },
-      json = { "prettier" },
-      jsonc = { "prettier" },
-      yaml = { "prettier" },
-      markdown = { "prettier" },
-      html = { "prettier" },
-      css = { "prettier" },
-      scss = { "prettier" },
+      javascript = { "biome" },
+      typescript = { "biome" },
+      javascriptreact = { "biome" },
+      typescriptreact = { "biome" },
+      json = { "biome" },
+      jsonc = { "biome" },
+      yaml = { "biome" },
+      markdown = { "biome" },
+      html = { "biome" },
+      css = { "biome" },
+      scss = { "biome" },
 
       -- Python
       python = { "isort", "black" },

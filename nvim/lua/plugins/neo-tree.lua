@@ -85,8 +85,8 @@ return {
       },
     },
     window = {
-      width = 15,
-      auto_expand_width = true,
+      width = 30,
+      auto_expand_width = false,
       mappings = {
         ["l"] = "open",
         ["h"] = "close_node",

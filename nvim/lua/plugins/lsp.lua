@@ -10,7 +10,8 @@ return {
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
-        "prettier"
+        "prettier",
+        "biome",
       })
     end,
   },

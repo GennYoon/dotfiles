@@ -50,3 +50,5 @@ cask "google-chrome"
 cask "raycast"
 cask "notion"
 cask "android-studio"
+
+brew "git-lfs"
