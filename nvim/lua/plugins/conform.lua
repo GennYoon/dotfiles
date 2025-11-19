@@ -26,17 +26,17 @@ return {
       lua = { "stylua" },
 
       -- Web technologies
-      javascript = { "biome" },
-      typescript = { "biome" },
-      javascriptreact = { "biome" },
-      typescriptreact = { "biome" },
-      json = { "biome" },
-      jsonc = { "biome" },
-      yaml = { "biome" },
-      markdown = { "biome" },
-      html = { "biome" },
-      css = { "biome" },
-      scss = { "biome" },
+      javascript = { "biome", "biome-organize-imports" },
+      typescript = { "biome", "biome-organize-imports" },
+      javascriptreact = { "biome", "biome-organize-imports" },
+      typescriptreact = { "biome", "biome-organize-imports" },
+      json = { "biome", "biome-organize-imports" },
+      jsonc = { "biome", "biome-organize-imports" },
+      yaml = { "biome", "biome-organize-imports" },
+      markdown = { "biome", "biome-organize-imports" },
+      html = { "biome", "biome-organize-imports" },
+      css = { "biome", "biome-organize-imports" },
+      scss = { "biome", "biome-organize-imports" },
 
       -- Python
       python = { "isort", "black" },
