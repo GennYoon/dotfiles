@@ -84,6 +84,9 @@ return {
       cmdline = {
         enabled = false,
       },
+      fuzzy = {
+        implementation = "lua",
+      },
 
       -- keymap = {
       --   preset = "enter",
