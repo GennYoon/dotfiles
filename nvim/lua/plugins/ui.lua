@@ -1,8 +1,4 @@
 return {
-  {
-    "nvimdev/dashboard-nvim",
-    enabled = false,
-  },
   -- 메시지, 명령줄 및 팝업 메뉴
   {
     "folke/noice.nvim",
