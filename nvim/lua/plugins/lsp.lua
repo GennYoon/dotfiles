@@ -3,6 +3,13 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        html = {
+          filetypes = { "html", "handlebars", "hbs", "css" },
+        },
+        emmet_language_server = {
+          filetypes = { "html", "javascriptreact", "typescriptreact", "vue", "svelte", "css", "sass", "scss", "less" },
+        },
+
         vtsls = {
           -- Biome가 포맷팅을 담당하므로 비활성화
           on_attach = function(client)
