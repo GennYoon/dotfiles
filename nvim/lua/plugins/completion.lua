@@ -19,6 +19,7 @@ return {
             return true
           end,
         },
+        ["<CR>"] = { "accept", "fallback" },
       },
 
       -- 소스 및 우선순위 설정
