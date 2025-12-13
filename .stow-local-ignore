@@ -21,6 +21,7 @@ _darcs
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
+\nvim.bak
 Makefile
 Brewfile
 Brewfile.lock.json

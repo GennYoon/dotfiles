@@ -28,7 +28,7 @@ return {
         },
         tailwindcss = {
           root_dir = function(...)
-            return require("lspconfig.util").root_pattern(".git")(...)
+            return require("lspconfig.util").root_pattern('tailwind.config.js', 'tailwind.config.ts', 'biome.json', '.git')(...)
           end,
         },
         tsserver = {

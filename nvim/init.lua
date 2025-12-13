@@ -1,6 +1,2 @@
-local vim = vim
-vim.loader.enable() -- ⚡SPEEEEEEEED ⚡
-
+-- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-
-require("config.health-check")
