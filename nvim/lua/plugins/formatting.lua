@@ -15,9 +15,11 @@ return {
     },
     opts = {
       -- 저장 시 포맷팅 강제 활성화
-      format_on_save = {
+      default_format_opts = {
         timeout_ms = 3000, -- 3초 내에 안 끝나면 포기 (타임아웃 늘림)
-        lsp_fallback = false, -- LSP 포맷터 대신 아래 지정한 도구(biome/rustywind) 사용
+        async = false, -- not recommended to change
+        quiet = false, -- not recommended to change
+        lsp_format = "fallback", -- not recommended to change
       },
       -- 파일 타입별 실행 순서 지정
       formatters_by_ft = {
