@@ -1,6 +1,7 @@
 {
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
+    "context7",
     "task-master-ai"
   ]
 }
