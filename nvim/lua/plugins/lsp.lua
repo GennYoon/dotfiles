@@ -4,7 +4,7 @@ return {
     opts = {
       servers = {
         html = {
-          filetypes = { "html", "handlebars", "hbs", "css" },
+          filetypes = { "html", "handlebars", "hbs" },
         },
         emmet_language_server = {
           filetypes = { "html", "javascriptreact", "typescriptreact", "vue", "svelte", "css", "sass", "scss", "less" },
