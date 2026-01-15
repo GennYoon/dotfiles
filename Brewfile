@@ -51,6 +51,7 @@ cask "raycast"
 cask "notion"
 cask "android-studio"
 cask "obsidian"
+cask "linear-linear"
 
 # Git LFS
 brew "git-lfs"
