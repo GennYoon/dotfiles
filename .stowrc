@@ -1,0 +1,5 @@
+--target=~/
+--ignore=.stowrc
+--ignore=Brewfile
+--ignore=.git
+--ignore=.DS_Store

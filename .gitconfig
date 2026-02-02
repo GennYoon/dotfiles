@@ -1,0 +1,39 @@
+[init]
+	defaultBranch = main
+[core]
+  excludesfile = ~/.gitignore
+  editor = nvim
+  ignorecase = false
+[user]
+	email = yoonwonyoul@webchemist.net
+	name = GennYoon
+[pull]
+	rebase = true
+[push]
+  default = simple
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+  ui = auto
+[hub]
+  protocol = https
+[github]
+  user = GennYoon
+[diff]
+  tool = nvimdiff
+[difftool "nvimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE
+  path =
+[mergetool "nvimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE -ancestor $BASE -merge $MERGED
+	trustExitCode = true
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[ghq]
+  root = ~/.ghq
