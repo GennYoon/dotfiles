@@ -37,6 +37,8 @@ brew "git-lfs" # Git LFS
 brew "pnpm"
 brew "nvm"
 brew "uv"
+brew "cocoapods"
+brew "orbstack"
 
 # AI 개발
 cask "claude-code"
@@ -44,6 +46,7 @@ cask "claude-code"
 # 필수 Application
 cask "google-chrome"
 cask "notion"
+cask "flutter"
 cask "android-studio"
 cask "obsidian"
 cask "wezterm"
