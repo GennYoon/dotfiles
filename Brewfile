@@ -38,7 +38,6 @@ brew "pnpm"
 brew "nvm"
 brew "uv"
 brew "cocoapods"
-brew "orbstack"
 
 # AI 개발
 cask "claude-code"
@@ -50,8 +49,10 @@ cask "flutter"
 cask "android-studio"
 cask "obsidian"
 cask "wezterm"
+cask "orbstack" # Docker
 
 cask "slack"
 cask "figma"
 cask "discord"
 cask "zoom"
+cask "1password"
