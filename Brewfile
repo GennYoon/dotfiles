@@ -51,6 +51,7 @@ cask "obsidian"
 cask "wezterm"
 cask "orbstack" # Docker
 
+cask "raycast"
 cask "slack"
 cask "figma"
 cask "discord"
