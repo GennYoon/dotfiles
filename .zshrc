@@ -29,3 +29,5 @@ alias cldd="claude --dangerously-skip-permissions"
 alias glm='CLAUDE_CONFIG_DIR="$HOME/.glm"\
   CLAUDE_CODE_COLOR_PRIMARY="#00D7FF"\
   claude --dangerously-skip-permissions'
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'

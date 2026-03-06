@@ -41,6 +41,7 @@ brew "cocoapods"
 
 # AI 개발
 cask "claude-code"
+cask "claude"
 
 # 필수 Application
 cask "google-chrome"
