@@ -41,20 +41,16 @@ brew "cocoapods"
 
 # AI 개발
 cask "claude-code"
-cask "claude"
+# cask "claude"
 
 # 필수 Application
 cask "google-chrome"
-cask "notion"
-cask "flutter"
-cask "android-studio"
-cask "obsidian"
+# cask "notion"
+# cask "flutter"
+# cask "android-studio"
+# cask "obsidian"
 cask "wezterm"
-cask "orbstack" # Docker
+# cask "orbstack" # Docker
 
-cask "raycast"
 cask "slack"
-cask "figma"
-cask "discord"
-cask "zoom"
 cask "1password"
