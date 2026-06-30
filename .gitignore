@@ -1,0 +1,10 @@
+# Sensitive configuration files
+.config/github-copilot/
+.config/webchemist/env
+
+# Local environment variables
+.env
+.env.local
+
+# macOS
+.DS_Store
